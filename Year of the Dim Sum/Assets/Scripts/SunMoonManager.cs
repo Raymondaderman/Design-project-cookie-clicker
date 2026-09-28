@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class MoonManager : MonoBehaviour {
+public class SunMoonManager : MonoBehaviour {
 	[SerializeField] private float moonClickAmount;
 	[SerializeField] private int   dayCycleTime;
 	private                  float cycleTimer;
@@ -25,7 +25,8 @@ public class MoonManager : MonoBehaviour {
 
 
 	public void OnClick() {
-		GameManager.Instance.CoinAmount += moonClickAmount;
-		Debug.Log("Day switched");
+		if (GameManager.Instance.IsDay) GameManager.Instance.CoinAmount += moonClickAmount;
+		else GameManager.Instance.CoinAmount                            += moonClickAmount * 2;
+		Debug.Log("Moon/Sun clicked");
 	}
 }
