@@ -1,29 +1,16 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class SunMoonAnimationEvents : MonoBehaviour {
-	[SerializeField] public  float tintChangeTime;
-	[SerializeField] private Image backgroundTint;
+	[SerializeField] public  float       tintChangeTime;
+	[SerializeField] private CanvasGroup backgroundTintCanvasGroup;
 
 	public void IsDayFalseEvent() {
 		GameManager.Instance.IsDay = false;
-		//StartCoroutine(BackgroundTintChanger(0f, 225f));
+		LeanTween.alphaCanvas(backgroundTintCanvasGroup, 1, tintChangeTime).setEaseOutExpo();
 	}
 
 	public void IsDayTrueEvent() {
 		GameManager.Instance.IsDay = true;
-		//StartCoroutine(BackgroundTintChanger(225f, 0f));
+		LeanTween.alphaCanvas(backgroundTintCanvasGroup, 0, tintChangeTime).setEaseOutExpo();
 	}
-
-	/*private IEnumerator BackgroundTintChanger(float fromValue, float toValue) {
-		var tintChangeTimer = tintChangeTime;
-		while (tintChangeTimer > 0f) {
-			tintChangeTimer            -= Time.deltaTime;
-			backgroundTint.tintColor.a =  Mathf.Lerp(fromValue, toValue, tintChangeTimer / tintChangeTime);
-			yield return null;
-		}
-
-		yield return null;
-	}*/
 }

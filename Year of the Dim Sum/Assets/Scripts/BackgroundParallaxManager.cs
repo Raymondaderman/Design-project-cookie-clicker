@@ -26,7 +26,7 @@ public class BackgroundParallaxManager : MonoBehaviour {
 		for (var i = 0; i < parallaxObjects.Length; i++) {
 			parallaxObjects[i].transform.position = originalPositions[i] +
 			                                        new Vector2(centeredMousePosX, centeredMousePosY) *
-			                                        (i * (i - parallaxObjects.Length / 2));
+			                                        (i * i);
 		}
 	}
 
