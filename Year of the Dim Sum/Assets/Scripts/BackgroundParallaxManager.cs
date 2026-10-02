@@ -19,8 +19,8 @@ public class BackgroundParallaxManager : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
-		var centeredMousePosX = (mousePosition.x - (Screen.width / 2f)) * mouseSpeedX;
-		var centeredMousePosY = (mousePosition.y - (Screen.width / 2f)) * mouseSpeedY;
+		var centeredMousePosX = (mousePosition.x - (Screen.width / 2f)) * (mouseSpeedX / Screen.width);
+		var centeredMousePosY = (mousePosition.y - (Screen.width / 2f)) * (mouseSpeedY / Screen.width);
 
 
 		for (var i = 0; i < parallaxObjects.Length; i++) {

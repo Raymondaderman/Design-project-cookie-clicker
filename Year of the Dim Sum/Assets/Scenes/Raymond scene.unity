@@ -777,7 +777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659701194271128251, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: m_Color.a
-      value: 0.3764706
+      value: 0.6392157
       objectReference: {fileID: 0}
     - target: {fileID: 5659701194271128251, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: m_Color.b
@@ -885,11 +885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046617840773296282, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: mouseSpeedX
-      value: 0.001
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7046617840773296282, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: mouseSpeedY
-      value: 0.0005
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
