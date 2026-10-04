@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 992442604045948723}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.93636, y: 0.93636, z: 0.93636}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4459231022111666335}
@@ -102,7 +102,7 @@ RectTransform:
   m_GameObject: {fileID: 2082895110106319240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.93636, y: 0.93636, z: 0.93636}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4459231022111666335}
@@ -175,9 +175,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2641690706470541514}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 23.734713, y: 23.734713, z: 23.734713}
+  m_LocalScale: {x: 15.248165, y: 15.248165, z: 15.248165}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6136687049429294883}
@@ -279,7 +279,7 @@ RectTransform:
   m_GameObject: {fileID: 5928684450403996838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.93636, y: 0.93636, z: 0.93636}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4459231022111666335}
@@ -354,7 +354,7 @@ RectTransform:
   m_GameObject: {fileID: 7628757628677275976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.93636, y: 0.93636, z: 0.93636}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4459231022111666335}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 4717627417525971804}
   - component: {fileID: 1398997815789479860}
   m_Layer: 5
-  m_Name: Moon_Sun_Piviot
+  m_Name: Sun_Moon_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -430,7 +430,7 @@ Transform:
   m_GameObject: {fileID: 7738303959952578004}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -99.9, z: 0}
+  m_LocalPosition: {x: 0, y: -100, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -482,6 +482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e8b574445987d4d865087ab4adfa12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SunMoonAnimationEvents
+  tintChangeTime: 1
+  lightIntensity: 0.6
+  backgroundTintCanvasGroup: {fileID: 0}
+  lanterns: []
+  lights: []
 --- !u!1 &7761731893018117904
 GameObject:
   m_ObjectHideFlags: 0
