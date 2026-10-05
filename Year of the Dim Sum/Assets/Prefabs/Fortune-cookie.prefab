@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cookie
   timeToDestroy: 3
+  cookieSound: {fileID: 8300000, guid: e653997a7405c454cbac3c9976ee3d86, type: 3}
 --- !u!1 &7112460588512398918
 GameObject:
   m_ObjectHideFlags: 0
