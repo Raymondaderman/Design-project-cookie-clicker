@@ -20,6 +20,7 @@ public class SunMoonAnimationEvents : MonoBehaviour {
 	}
 
 	public void IsDayFalseEvent() {
+		Debug.Log("Night Start");
 		GameManager.Instance.IsDay = false;
 		LeanTween.alphaCanvas(backgroundTintCanvasGroup, 1, tintChangeTime).setEaseOutExpo();
 		foreach (var light in lights) {
@@ -29,6 +30,7 @@ public class SunMoonAnimationEvents : MonoBehaviour {
 	}
 
 	public void IsDayTrueEvent() {
+		Debug.Log("Day Start");
 		GameManager.Instance.IsDay = true;
 		LeanTween.alphaCanvas(backgroundTintCanvasGroup, 0, tintChangeTime).setEaseOutExpo();
 		foreach (var light in lights) {
