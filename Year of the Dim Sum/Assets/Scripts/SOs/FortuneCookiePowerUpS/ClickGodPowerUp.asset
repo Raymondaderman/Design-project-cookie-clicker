@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a5174a40e1431a45829938a5a6094b2, type: 3}
-  m_Name: OneCoinPowerUp
+  m_Name: ClickGodPowerUp
   m_EditorClassIdentifier: Assembly-CSharp::FortuneCookiePowerUpSO
-  powerUpName: Coin
-  multiplier: 0
-  duration: 0
-  rarity: 0
-  powerUpDescription: 
+  affectedFactory: {fileID: 0}
+  powerUpName: Click god
+  multiplier: 100
+  duration: 5
+  rarity: 1
+  powerUpDescription: Clicks are multiplied by 100x.
+  isTemporaryUpgrade: 1

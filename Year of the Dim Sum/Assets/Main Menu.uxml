@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center;">
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 400px; height: 600px; position: absolute; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center;">
+            <ui:Button text="Start" name="StartButton" style="width: 318px; height: 80px; font-size: 74px;"/>
+            <ui:Button text="Quit" name="QuitButton" style="width: 318px; height: 80px; font-size: 74px;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
