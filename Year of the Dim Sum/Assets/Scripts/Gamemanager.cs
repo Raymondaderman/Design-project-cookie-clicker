@@ -30,13 +30,17 @@ public class GameManager : MonoBehaviour {
 
 	private void Update() {
 		foreach (FactorySO factory in factories) {
-			if (factory.automatic && factory.makeMoneyCoroutine == null)
-				factory.makeMoneyCoroutine = StartCoroutine(MakeMoney(factory));
+			if (factory.automatic && factory.makeMoneyCoroutine == null) factory.makeMoneyCoroutine = StartCoroutine(MakeMoneyCoroutine(factory));
 		}
 	}
 
-	public IEnumerator MakeMoney(FactorySO factory) {
+	public void MakeMoney(FactorySO factory) {
+		if (factory.makeMoneyCoroutine ==null) factory.makeMoneyCoroutine = StartCoroutine(MakeMoneyCoroutine(factory));
+	}
+	
+	public IEnumerator MakeMoneyCoroutine(FactorySO factory) {
 		yield return new WaitForSeconds(factory.Cooldown());
-		
+		CoinAmount                 += factory.Earnings();
+		factory.makeMoneyCoroutine =  null;
 	}
 }
