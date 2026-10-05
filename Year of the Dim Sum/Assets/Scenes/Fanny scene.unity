@@ -664,22 +664,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FortuneCookie
       objectReference: {fileID: 0}
-    - target: {fileID: 6426391196344321115, guid: ede51716319006f4fa3be202106925aa, type: 3}
-      propertyPath: offset.x
-      value: 1200
-      objectReference: {fileID: 0}
-    - target: {fileID: 6426391196344321115, guid: ede51716319006f4fa3be202106925aa, type: 3}
-      propertyPath: offset.y
-      value: 525
-      objectReference: {fileID: 0}
-    - target: {fileID: 6426391196344321115, guid: ede51716319006f4fa3be202106925aa, type: 3}
-      propertyPath: xRangeForSpawn
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 6426391196344321115, guid: ede51716319006f4fa3be202106925aa, type: 3}
-      propertyPath: yRangeForSpawn
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 8653541739167476423, guid: ede51716319006f4fa3be202106925aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -151,8 +151,8 @@ MonoBehaviour:
   - {fileID: 2654335795433915827, guid: 9ef6fe6c57b3bc64599417bf47a4b243, type: 3}
   timeToRespawn: 0.5
   currentTime: 0.5
-  xRangeForSpawn: 200
-  yRangeForSpawn: 150
+  xRangeForSpawn: 600
+  yRangeForSpawn: 500
   canSpawnCookie: 1
-  offset: {x: 513.5, y: 184}
+  offset: {x: 1200, y: 525}
   placeToPutCookie: {fileID: 3176716033417838918}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2899974090515322651}
   - component: {fileID: -3075462446517599570}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Fortune-cookie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6610b7435b9ea4e91d6f601b3785e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cookie
+  timeToDestroy: 3
 --- !u!1 &7112460588512398918
 GameObject:
   m_ObjectHideFlags: 0
