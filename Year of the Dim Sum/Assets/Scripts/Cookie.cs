@@ -5,10 +5,12 @@ using UnityEngine.UI;
 public class Cookie : MonoBehaviour
 {
     [SerializeField] private float timeToDestroy;
+    [SerializeField] AudioClip fortunCookieSound;
     private float timer;
-    public void OnCookieClick()
+    public void OnFortunCookieClick()
     {
         Debug.Log("Click cookie");
+        AudioManager.instance.PlayASound(fortunCookieSound, 1f);
         Destroy(gameObject);
     }
 
