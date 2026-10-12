@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: -3075462446517599570}
         m_TargetAssemblyTypeName: Cookie, Assembly-CSharp
-        m_MethodName: OnCookieClick
+        m_MethodName: OnFortunCookieClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cookie
   timeToDestroy: 3
-  cookieSound: {fileID: 8300000, guid: e653997a7405c454cbac3c9976ee3d86, type: 3}
+  fortunCookieSound: {fileID: 8300000, guid: e653997a7405c454cbac3c9976ee3d86, type: 3}
 --- !u!1 &7112460588512398918
 GameObject:
   m_ObjectHideFlags: 0
