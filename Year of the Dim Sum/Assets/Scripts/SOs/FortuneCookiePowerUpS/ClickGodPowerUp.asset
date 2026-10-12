@@ -18,4 +18,4 @@ MonoBehaviour:
   duration: 5
   rarity: 1
   powerUpDescription: Clicks are multiplied by 100x.
-  isTemporaryUpgrade: 1
+  isClickPowerUp: 1
