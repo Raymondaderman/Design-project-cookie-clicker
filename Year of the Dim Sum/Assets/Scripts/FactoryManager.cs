@@ -31,17 +31,27 @@ public class FactoryManager : MonoBehaviour
 		}
 	}
 
-	public void MakeMoney(FactorySO factory, Slider timer) {
-		if (factory.automatic) factory.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factory, timer));
+	public void MakeMoney(GameObject factoryObject) {
+		FactorySO factory = factoryObject.GetComponent<FactorySO>();
+		Slider cooldownSlider = factoryObject.GetComponent<Slider>();
+		if (factory.automatic) factory.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factory, cooldownSlider));
 	}
 
-	public void LevelUp(FactorySO factory, TextMeshProUGUI levelText, TextMeshProUGUI costText,  TextMeshProUGUI earningsText, TextMeshProUGUI cooldownText) {
+	public void LevelUp(GameObject factoryObject, TextMeshProUGUI costText,  TextMeshProUGUI earningsText, TextMeshProUGUI cooldownText) {
+		FactorySO factory = factoryObject.GetComponent<FactorySO>();
 		if (gameManager.CoinAmount >= factory.Cost()) {
 			gameManager.CoinAmount -= factory.Cost();
 			factory.Level++;
-			levelText.text = factory.Level.ToString();
+			TextMeshProUGUI[] texts = factoryObject.GetComponentsInChildren<TextMeshProUGUI>();
+			foreach (var text in texts) {
+				if (text.CompareTag("FactoryLevel")) {
+					text.text = factory.Level.ToString();
+					break;
+				}
+			}
+			
 			costText.text  = factory.Cost().ToString();
-			earningsText.text = factory.Earnings().ToString();
+			earningsText.text = factory.Earnings.ToString();
 			cooldownText.text = factory.Cooldown().ToString();
 		}
 	}
@@ -54,7 +64,7 @@ public class FactoryManager : MonoBehaviour
 			yield return null;
 		}
 
-		gameManager.CoinAmount     += factory.Earnings();
+		gameManager.CoinAmount     += factory.Earnings;
 		factory.makeMoneyCoroutine =  null;
 	}
 }

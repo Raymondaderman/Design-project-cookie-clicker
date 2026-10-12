@@ -862,7 +862,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FactoryManager
   factories:
   - {fileID: 11400000, guid: 4f3fe338abcb3384fac3f6b201b5db67, type: 2}
-  cooldownSliders: []
+  cooldownSliders:
+  - {fileID: 623096121}
 --- !u!4 &884237029
 Transform:
   m_ObjectHideFlags: 0

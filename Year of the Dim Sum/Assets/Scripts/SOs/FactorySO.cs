@@ -17,10 +17,13 @@ public class FactorySO : ScriptableObject {
 	public string NameText() => nameText;
 	public Sprite Sprite()   => sprite;
 	public int    Cost()     => cost     + costIncrement    * level;
-	public int    Earnings() => earnings + earnings * level / maxLevel;
 	public int    Cooldown() => cooldown - cooldown * level / maxLevel / 2;
 	public int Level {
 		get => level;
 		set => level = value;
+	}
+	public int Earnings {
+		get=>earnings + earnings* level / maxLevel;
+		set => earnings = value;
 	}
 }
