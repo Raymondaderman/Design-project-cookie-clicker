@@ -1,13 +1,10 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager Instance;
 	[Header("General Information")]
 	[SerializeField] private float coinAmount;
-	[SerializeField] private bool        isDay;
-	[SerializeField] private FactorySO[] factories;
+	[SerializeField] private bool isDay;
 
 	//Getters and setters
 	public float CoinAmount {
@@ -27,20 +24,5 @@ public class GameManager : MonoBehaviour {
 			Instance = this;
 		}
 	}
-
-	private void Update() {
-		foreach (FactorySO factory in factories) {
-			if (factory.automatic && factory.makeMoneyCoroutine == null) factory.makeMoneyCoroutine = StartCoroutine(MakeMoneyCoroutine(factory));
-		}
-	}
-
-	public void MakeMoney(FactorySO factory) {
-		if (factory.makeMoneyCoroutine ==null) factory.makeMoneyCoroutine = StartCoroutine(MakeMoneyCoroutine(factory));
-	}
-	
-	public IEnumerator MakeMoneyCoroutine(FactorySO factory) {
-		yield return new WaitForSeconds(factory.Cooldown());
-		CoinAmount                 += factory.Earnings();
-		factory.makeMoneyCoroutine =  null;
-	}
 }
+
