@@ -1,0 +1,31 @@
+:root {
+}
+
+.mainMenuButton {
+    width: 318px;
+    height: 80px;
+    font-size: 74px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    -unity-font-definition: url("project://database/Assets/Font/DarumadropOne-Regular.ttf?fileID=12800000&guid=d11475950ce383347a70b1041c77d5d3&type=3#DarumadropOne-Regular");
+}
+
+.mainMenuButton:hover {
+    width: 318px;
+    height: 80px;
+    font-size: 74px;
+    translate: 0 0;
+    scale: 1.1 1.1;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.mainMenuButton:active {
+    width: 318px;
+    height: 80px;
+    font-size: 74px;
+    translate: 0 0;
+    scale: 0.9 0.9;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+}

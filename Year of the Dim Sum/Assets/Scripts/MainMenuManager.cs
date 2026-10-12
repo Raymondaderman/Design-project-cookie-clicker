@@ -15,14 +15,17 @@ public class MainMenuManager : MonoBehaviour {
 		startButton = root.Q<Button>("StartButton");
 		quitButton = root.Q<Button>("QuitButton");
 		
+		startButton.RegisterCallback<ClickEvent>(OnStartClick);
+		quitButton.RegisterCallback<ClickEvent>(OnQuitClick);
+		
 	}
 
 
-	public void OnStartClick() {
+	private void OnStartClick(ClickEvent clickEvent) {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
-	
-	public void OnQuitClick() {
+
+	private void OnQuitClick(ClickEvent clickEvent) {
 		Application.Quit();
 	}
 }

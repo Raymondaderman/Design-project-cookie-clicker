@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class UpgradeManager : MonoBehaviour {
+public class PowerUpManager : MonoBehaviour {
 	[SerializeField] private bool activatePowerUp;
 
 	[SerializeField] private FortuneCookiePowerUpSO[] fortuneCookiePowerUps;

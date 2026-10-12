@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI_Documents/MainMenuStyles.uss?fileID=7433441132597879392&amp;guid=4356914d5d1cf9141a433b2f9b9d0e2f&amp;type=3#MainMenuStyles"/>
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; flex-direction: row; align-items: center; justify-content: center;">
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 400px; height: 600px; position: absolute; background-color: rgba(0, 0, 0, 0); align-items: center; justify-content: center;">
+            <ui:Button text="Start" name="StartButton" class="mainMenuButton" style="position: relative; text-overflow: clip; -unity-text-align: middle-center; white-space: nowrap;"/>
+            <ui:Button text="Quit" name="QuitButton" class="mainMenuButton" style="width: 318px; height: 80px; font-size: 74px; translate: 0 45px;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

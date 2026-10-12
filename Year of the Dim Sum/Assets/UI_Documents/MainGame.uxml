@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="FactoryHolder" style="flex-grow: 1; align-items: flex-start;">
+            <ui:Slider label="Slider" value="42" high-value="100" style="position: absolute; top: 447px; left: 835px;"/>
+            <ui:Button text="Button" name="" style="-unity-text-align: lower-center; position: absolute; top: 410px; left: 592px; white-space: nowrap; height: 192px; width: 216px; align-self: auto; justify-content: flex-start; align-content: auto; font-size: 0; background-color: rgb(255, 0, 0);"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
