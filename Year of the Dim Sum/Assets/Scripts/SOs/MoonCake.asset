@@ -20,4 +20,4 @@ MonoBehaviour:
   level: 1
   maxLevel: 10
   sprite: {fileID: 0}
-  automatic: 0
+  automatic: 1
