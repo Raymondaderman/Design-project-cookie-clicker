@@ -42,17 +42,21 @@ public class FactoryManager : MonoBehaviour
 		if (gameManager.CoinAmount >= factory.Cost()) {
 			gameManager.CoinAmount -= factory.Cost();
 			factory.Level++;
-			TextMeshProUGUI[] texts = factoryObject.GetComponentsInChildren<TextMeshProUGUI>();
-			foreach (var text in texts) {
-				if (text.CompareTag("FactoryLevel")) {
-					text.text = factory.Level.ToString();
-					break;
-				}
-			}
+			string[] tag  = new[] { "123" };
+			string[] text = new[] { "123" };
+			FixText(factoryObject, tag, text);
+			
 			
 			costText.text  = factory.Cost().ToString();
 			earningsText.text = factory.Earnings.ToString();
 			cooldownText.text = factory.Cooldown().ToString();
+		}
+	}
+
+	private void FixText(GameObject obj, string[] tag, string[] text) {
+		TextMeshProUGUI[] texts = obj.GetComponentsInChildren<TextMeshProUGUI>();
+		for (int i = 0; i < texts.Length; i++) {
+			
 		}
 	}
 

@@ -6,7 +6,7 @@ public class FactorySO : ScriptableObject {
 	[SerializeField]                           string    nameText;
 	[SerializeField]                           int       cost;
 	[SerializeField]                           int       costIncrement;
-	[SerializeField]                           int       earnings;
+	[SerializeField]                           float       earnings;
 	[SerializeField]                           int       cooldown;
 	[SerializeField] private                   int       level;
 	[SerializeField] private                   int       maxLevel;
@@ -22,7 +22,7 @@ public class FactorySO : ScriptableObject {
 		get => level;
 		set => level = value;
 	}
-	public int Earnings {
+	public float Earnings {
 		get=>earnings + earnings* level / maxLevel;
 		set => earnings = value;
 	}
