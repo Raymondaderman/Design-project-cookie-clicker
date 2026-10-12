@@ -12,7 +12,7 @@ public class FactoryManager : MonoBehaviour
 	GameManager gameManager;
 	
 	void Start() {
-		gameManager = GetComponent<GameManager>();
+		gameManager = FindFirstObjectByType<GameManager>();
 	}
 
 	private void Update() {
@@ -26,45 +26,52 @@ public class FactoryManager : MonoBehaviour
 					}
 				}
 				factory.makeMoneyCoroutine ??=
-					StartCoroutine(MakeMoneyCoroutine(factory, cooldownSliders[sliderIndex]));
+					StartCoroutine(MakeMoneyCoroutine(factory));
 			}
 		}
 	}
 
-	public void MakeMoney(GameObject factoryObject) {
-		FactorySO factory = factoryObject.GetComponent<FactorySO>();
-		Slider cooldownSlider = factoryObject.GetComponent<Slider>();
-		if (factory.automatic) factory.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factory, cooldownSlider));
+	public void MakeMoney(FactorySO factory) {
+		print("1");
+		factory.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factory));
 	}
 
-	public void LevelUp(GameObject factoryObject, TextMeshProUGUI costText,  TextMeshProUGUI earningsText, TextMeshProUGUI cooldownText) {
-		FactorySO factory = factoryObject.GetComponent<FactorySO>();
+	private FactorySO factoryInstance;
+	public void LevelUp(FactorySO factory) {
 		if (gameManager.CoinAmount >= factory.Cost()) {
 			gameManager.CoinAmount -= factory.Cost();
 			factory.Level++;
-			string[] tag  = new[] { "123" };
-			string[] text = new[] { "123" };
-			FixText(factoryObject, tag, text);
-			
-			
-			costText.text  = factory.Cost().ToString();
-			earningsText.text = factory.Earnings.ToString();
-			cooldownText.text = factory.Cooldown().ToString();
+			factoryInstance = factory;
 		}
 	}
-
-	private void FixText(GameObject obj, string[] tag, string[] text) {
-		TextMeshProUGUI[] texts = obj.GetComponentsInChildren<TextMeshProUGUI>();
-		for (int i = 0; i < texts.Length; i++) {
-			
-		}
+	public void LevelUpText(GameObject factoryObject) {
+		StartCoroutine(LevelUpCoroutine(factoryObject));
 	}
 
-	private IEnumerator MakeMoneyCoroutine(FactorySO factory, Slider cooldownSlider) {
+	IEnumerator LevelUpCoroutine(GameObject factoryObject) {
+		yield return new WaitForEndOfFrame();
+		string[] tags = { "LevelText", "CostText", "EarningsText", "CooldownText" };
+		string[] text = {
+			factoryInstance.Level.ToString(), factoryInstance.Cost().ToString(), factoryInstance.Earnings.ToString(),
+			factoryInstance.Cooldown().ToString()
+		};
+
+		TextMeshProUGUI[] texts = factoryObject.GetComponentsInChildren<TextMeshProUGUI>();
+		foreach (TextMeshProUGUI t in texts)
+			for (int i = 0; i < tags.Length; i++) {
+				if (t.CompareTag(tags[i])) {
+					t.text = text[i];
+					break;
+				}
+			}
+	}
+
+	private IEnumerator MakeMoneyCoroutine(FactorySO factory) {
 		float time = 0;
+		print("2");
 		while (time < factory.Cooldown()) {
 			time                 += Time.deltaTime;
-			cooldownSlider.value =  time / factory.Cooldown();
+			print(time);
 			yield return null;
 		}
 
