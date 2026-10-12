@@ -3,6 +3,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+    [SerializeField] private AudioSource musicAudioSource;
 
     AudioSource source;
     private void Awake()
@@ -13,10 +14,16 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         source = GetComponent<AudioSource>();
+        PlayBGMusic();
     }
 
     public void PlayASound(AudioClip sound, float vol)
     {
         source.PlayOneShot(sound, vol);
+    }
+
+    private void PlayBGMusic()
+    {
+        musicAudioSource.Play();
     }
 }
