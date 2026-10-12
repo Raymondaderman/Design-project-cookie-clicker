@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
 
     private void PlayBGMusic()
     {
+
         musicAudioSource.Play();
     }
 }
