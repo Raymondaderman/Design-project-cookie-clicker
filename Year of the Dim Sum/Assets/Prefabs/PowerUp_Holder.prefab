@@ -106,7 +106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ddddddddddddddddddddddddddddd
+  m_text: Blah blah blah blahblah
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a29791ce89c49544ebc5c255cd07a2ca, type: 2}
   m_sharedMaterial: {fileID: -1631723959696745798, guid: a29791ce89c49544ebc5c255cd07a2ca, type: 2}
@@ -372,6 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9021682111547590629}
   - component: {fileID: 8422301715691305649}
+  - component: {fileID: 1952139592651020128}
   m_Layer: 0
   m_Name: PowerUp_Holder
   m_TagString: Untagged
@@ -390,7 +391,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 958348203292453751}
   - {fileID: 5677844063774072584}
@@ -410,3 +411,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PowerUp
   powerUpName: {fileID: 2424089966529344875}
   powerUpDescription: {fileID: 87528744523354588}
+--- !u!95 &1952139592651020128
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8235739138794069987}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 962461ea4752b884681ec5b7b93b8f0a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
