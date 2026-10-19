@@ -45,5 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpManager
   activatePowerUp: 0
+  fortuneCookieCanvas: {fileID: 0}
   fortuneCookiePowerUps:
   - {fileID: 11400000, guid: bd144c3b64e60e3498992a4037d0b3ac, type: 2}
+  - {fileID: 11400000, guid: dbd316960d8033a4a8e1588c2b16f3c4, type: 2}

@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 public class MainMenuManager : MonoBehaviour {
 
+	[SerializeField] private AudioClip clickSound;
+
 	private Button startButton;
 	private Button quitButton;
 
@@ -22,10 +24,12 @@ public class MainMenuManager : MonoBehaviour {
 
 
 	private void OnStartClick(ClickEvent clickEvent) {
+		AudioManager.Instance.PlayASound(clickSound, 1);
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
 	private void OnQuitClick(ClickEvent clickEvent) {
+		AudioManager.Instance.PlayASound(clickSound, 1);
 		Application.Quit();
 	}
 }

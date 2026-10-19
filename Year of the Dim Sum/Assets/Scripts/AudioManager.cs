@@ -1,30 +1,25 @@
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
-{
-    public static AudioManager instance;
-    [SerializeField] private AudioSource musicAudioSource;
+public class AudioManager : MonoBehaviour {
+	public static            AudioManager Instance;
+	[SerializeField] private AudioSource  musicAudioSource;
 
-    AudioSource source;
-    private void Awake()
-    {
-        instance = this;
-    }
+	AudioSource source;
 
-    private void Start()
-    {
-        source = GetComponent<AudioSource>();
-        PlayBGMusic();
-    }
+	private void Awake() {
+		if (Instance == null) Instance = this;
+	}
 
-    public void PlayASound(AudioClip sound, float vol)
-    {
-        source.PlayOneShot(sound, vol);
-    }
+	private void Start() {
+		source = GetComponent<AudioSource>();
+		PlayBGMusic();
+	}
 
-    private void PlayBGMusic()
-    {
+	public void PlayASound(AudioClip sound, float vol) {
+		source.PlayOneShot(sound, vol);
+	}
 
-        musicAudioSource.Play();
-    }
+	private void PlayBGMusic() {
+		musicAudioSource.Play();
+	}
 }

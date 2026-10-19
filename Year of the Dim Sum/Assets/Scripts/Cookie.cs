@@ -11,7 +11,8 @@ public class Cookie : MonoBehaviour {
 
 	public void OnFortunCookieClick() {
 		Debug.Log("Click cookie");
-		AudioManager.instance.PlayASound(fortunCookieSound, 1f);
+		AudioManager.Instance.PlayASound(fortunCookieSound, 1f);
+		powerUpPopupPrefab.transform.position = gameObject.transform.position;
 		FindAnyObjectByType<PowerUpManager>()
 			.StartCoroutine(PowerUpManager.Instance.FortuneCookiePowerUp(powerUpPopupPrefab));
 
