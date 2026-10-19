@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
@@ -5,6 +7,9 @@ public class GameManager : MonoBehaviour {
 	[Header("General Information")]
 	[SerializeField] private float coinAmount;
 	[SerializeField] private bool isDay;
+
+	[Header("TMP")]
+	[SerializeField] private TextMeshProUGUI coinDisplay;
 
 	//Getters and setters
 	public float CoinAmount {
@@ -23,6 +28,10 @@ public class GameManager : MonoBehaviour {
 		} else {
 			Instance = this;
 		}
+	}
+
+	private void Update() {
+		coinDisplay.text="Coins: " + coinAmount;	
 	}
 }
 
