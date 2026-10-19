@@ -10,12 +10,13 @@ public class FortuneCookiePowerUpSO : ScriptableObject {
 	[SerializeField]            private float     duration;
 	[SerializeField]            private int       rarity;
 	[SerializeField] [TextArea] private string    powerUpDescription;
-	[SerializeField]            private bool      isTemporaryUpgrade;
+	[SerializeField]            private bool      isClickPowerUp;
 
-	public string PowerUpName        => powerUpName;
-	public float  Multiplier         => multiplier;
-	public float  Duration           => duration;
-	public int    Rarity             => rarity;
-	public string PowerUpDescription => powerUpDescription;
-	public bool   IsTemporaryUpgrade => isTemporaryUpgrade;
+	public FactorySO AffectedFactory    => affectedFactory;
+	public string    PowerUpName        => powerUpName;
+	public float     Multiplier         => multiplier;
+	public float     Duration           => duration;
+	public int       Rarity             => rarity;
+	public string    PowerUpDescription => powerUpDescription;
+	public bool      IsClickPowerUp     => isClickPowerUp;
 }

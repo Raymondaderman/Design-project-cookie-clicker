@@ -10,11 +10,11 @@ public class PowerUpManager : MonoBehaviour {
 
 	private void Update() {
 		if (!activatePowerUp) return;
-		Debug.Log(RandomPowerUp());
+		StartCoroutine(FortuneCookiePowerUp());
 		activatePowerUp = false;
 	}
 
-	public FortuneCookiePowerUpSO RandomPowerUp() {
+	private FortuneCookiePowerUpSO RandomPowerUp() {
 		Debug.Log("Entered PowerUp generator");
 		var totalTickets = 0;
 		foreach (var powerUp in fortuneCookiePowerUps) {
@@ -30,10 +30,21 @@ public class PowerUpManager : MonoBehaviour {
 		return null;
 	}
 
-	private IEnumerator FortuneCookiePowerUp() {
+	public IEnumerator FortuneCookiePowerUp() {
+		Debug.Log("Entered PowerUp IEnumerator");
 		var powerUp = RandomPowerUp();
-		
-		
+
+		if (powerUp.IsClickPowerUp) {
+			SunMoonManager.Instance.ClickAmount *= powerUp.Multiplier;
+			yield return new WaitForSeconds(powerUp.Duration);
+			SunMoonManager.Instance.ClickAmount /= powerUp.Multiplier;
+		} else {
+			var factorySo = powerUp.AffectedFactory;
+			factorySo.Earnings *= powerUp.Multiplier;
+			yield return new WaitForSeconds(powerUp.Duration);
+			factorySo.Earnings /= powerUp.Multiplier;
+		}
+
 		yield return null;
 	}
 }

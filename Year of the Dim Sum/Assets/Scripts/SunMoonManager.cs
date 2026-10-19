@@ -2,12 +2,26 @@ using System;
 using UnityEngine;
 
 public class SunMoonManager : MonoBehaviour {
-	[SerializeField] private float moonClickAmount;
-	[SerializeField] private int   dayCycleTime;
-	private                  float cycleTimer;
-
-
+	public static            SunMoonManager Instance;
+	[SerializeField] private float          clickAmount;
+	[SerializeField] private int            dayCycleTime;
+	private                  float          cycleTimer;
+	
 	[SerializeField] private Animator sunMoonAnimator;
+	
+	
+	public float ClickAmount {
+		get => clickAmount;
+		set => clickAmount = value;
+	}
+
+	private void Awake() {
+		if (Instance != null) {
+			Destroy(this.gameObject);
+		} else {
+			Instance = this;
+		}
+	}
 
 	private void Update() {
 		CycleChange();
@@ -25,8 +39,8 @@ public class SunMoonManager : MonoBehaviour {
 
 
 	public void OnClick() {
-		if (GameManager.Instance.IsDay) GameManager.Instance.CoinAmount += moonClickAmount;
-		else GameManager.Instance.CoinAmount                            += moonClickAmount * 2;
+		if (GameManager.Instance.IsDay) GameManager.Instance.CoinAmount += clickAmount;
+		else GameManager.Instance.CoinAmount                            += clickAmount * 2;
 		Debug.Log("Moon/Sun clicked");
 	}
 }

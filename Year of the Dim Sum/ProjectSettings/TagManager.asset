@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Lantern
+  - CostText
+  - EarningsText
+  - CooldownText
+  - LevelText
   layers:
   - Default
   - TransparentFX
