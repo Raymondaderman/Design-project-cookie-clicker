@@ -10,6 +10,8 @@ TagManager:
   - CooldownText
   - LevelText
   - CooldownImage
+  - InitialUpgradeButton
+  - FactoryComponents
   layers:
   - Default
   - TransparentFX

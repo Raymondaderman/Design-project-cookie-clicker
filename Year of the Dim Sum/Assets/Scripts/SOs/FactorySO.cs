@@ -13,9 +13,6 @@ public class FactorySO : ScriptableObject {
 	[SerializeField]                           Sprite    sprite;
 	public bool      automatic;
 	public Coroutine makeMoneyCoroutine;
-
-	public string NameText() => nameText;
-	public Sprite Sprite()   => sprite;
 	public int    Cost()     => cost     + costIncrement    * level;
 	public float  Cooldown() => cooldown + 0.1f - cooldown * level / maxLevel / 2;
 	public int MaxLevel() => maxLevel+1;

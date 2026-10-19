@@ -35,7 +35,6 @@ public class FactoryManager : MonoBehaviour {
 		foreach (Image i in factory.GetComponentsInChildren<Image>()) {
 			if (i.CompareTag("CooldownImage")) {
 				fillImage = i;
-				print("found cooldown image");
 				break;
 			}
 		}
@@ -48,6 +47,10 @@ public class FactoryManager : MonoBehaviour {
 		factoryInstance.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factoryInstance, fillImage, cooldownText));
 	}
 
+	public void ActivateFactory(GameObject factory) {
+		factory.gameObject.SetActive(true);
+	}
+	
 	public void LevelUp(FactorySO factory) {
 		if (gameManager.CoinAmount >= factory.Cost() && factory.Level<factory.MaxLevel()) {
 			factoryInstance        =  factory;
@@ -58,6 +61,7 @@ public class FactoryManager : MonoBehaviour {
 		}
 	}
 
+	
 	public void LevelUpText(GameObject factoryObject) {
 		StartCoroutine(LevelUpCoroutine(factoryObject));
 	}
@@ -66,15 +70,17 @@ public class FactoryManager : MonoBehaviour {
 		yield return new WaitForEndOfFrame();
 		if (initialUnlock) {
 			foreach (Button b in factoryObject.GetComponentsInChildren<Button>()) {
-				if (b.CompareTag(null)) Destroy(b.gameObject);
-				else b.gameObject.SetActive(true);
+				if (b.CompareTag("InitialUpgradeButton")) {
+					Destroy(b.gameObject);
+					break;
+				}
 			}
 		}
 
 		if (levelUp) {
 			string[] tags = { "LevelText", "CostText", "EarningsText", "CooldownText" };
 			string[] text = {
-				factoryInstance.Level.ToString(), "Cost: " + factoryInstance.Cost(),
+				(factoryInstance.Level-1).ToString(), "Cost: " + factoryInstance.Cost(),
 				"Earn: " + factoryInstance.Earnings, Math.Round(factoryInstance.Cooldown(), 1) + " sec"
 			};
 

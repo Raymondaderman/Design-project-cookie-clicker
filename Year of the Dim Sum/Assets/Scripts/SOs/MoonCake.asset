@@ -17,7 +17,7 @@ MonoBehaviour:
   costIncrement: 2
   earnings: 10
   cooldown: 2
-  level: 1
+  level: 11
   maxLevel: 10
   sprite: {fileID: 0}
   automatic: 0
