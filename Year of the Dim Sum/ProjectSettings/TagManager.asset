@@ -49,6 +49,9 @@ TagManager:
   - name: Decor
     uniqueID: 105490063
     locked: 0
+  - name: Fortune Cookie
+    uniqueID: 2054749309
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []

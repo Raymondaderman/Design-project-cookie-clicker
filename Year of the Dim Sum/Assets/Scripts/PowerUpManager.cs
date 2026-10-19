@@ -4,14 +4,18 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class PowerUpManager : MonoBehaviour {
-	[SerializeField] private bool activatePowerUp;
+	public static            PowerUpManager Instance;
+	[SerializeField] private bool           activatePowerUp;
+
+	[SerializeField] private Canvas fortuneCookieCanvas;
 
 	[SerializeField] private FortuneCookiePowerUpSO[] fortuneCookiePowerUps;
 
+	private void Awake() {
+		if (Instance == null) Instance = this;
+	}
+
 	private void Update() {
-		if (!activatePowerUp) return;
-		StartCoroutine(FortuneCookiePowerUp());
-		activatePowerUp = false;
 	}
 
 	private FortuneCookiePowerUpSO RandomPowerUp() {
@@ -30,9 +34,15 @@ public class PowerUpManager : MonoBehaviour {
 		return null;
 	}
 
-	public IEnumerator FortuneCookiePowerUp() {
-		Debug.Log("Entered PowerUp IEnumerator");
-		var powerUp = RandomPowerUp();
+	public IEnumerator FortuneCookiePowerUp(GameObject powerUpPopupPrefab) {
+		var powerUp      = RandomPowerUp();
+		var powerUpPopup = powerUpPopupPrefab.GetComponent<PowerUpPopup>();
+		powerUpPopup.PowerUpName.text        = powerUp.PowerUpName;
+		powerUpPopup.PowerUpDescription.text = powerUp.PowerUpDescription;
+
+		Instantiate(powerUpPopupPrefab, powerUpPopupPrefab.transform.position, powerUpPopupPrefab.transform.rotation,
+		            fortuneCookieCanvas.transform);
+
 
 		if (powerUp.IsClickPowerUp) {
 			SunMoonManager.Instance.ClickAmount *= powerUp.Multiplier;

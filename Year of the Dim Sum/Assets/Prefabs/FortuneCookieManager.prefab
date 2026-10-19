@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 8653541739167476423}
   - component: {fileID: 6426391196344321115}
   m_Layer: 0
-  m_Name: FortuneCookie
+  m_Name: FortuneCookieManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
