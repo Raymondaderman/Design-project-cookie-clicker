@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: MoonCake
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
   nameText: Moon Cake
-  cost: 10
+  cost: 0
   costIncrement: 2
   earnings: 10
   cooldown: 2
-  level: 0
+  level: 1
   maxLevel: 10
   sprite: {fileID: 0}
   automatic: 0
