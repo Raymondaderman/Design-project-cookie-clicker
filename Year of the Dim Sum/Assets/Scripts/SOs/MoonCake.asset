@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d310f969c92c104a9c3ad16baf66251, type: 3}
   m_Name: MoonCake
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
-  nameText: Moon Cake
   cost: 0
   costIncrement: 2
   earnings: 10
   cooldown: 2
-  level: 11
+  level: 0
   maxLevel: 10
-  sprite: {fileID: 0}
+  upgradeAmount: 0
+  upgradeMultiplier: 1
+  upgradeCost: 0
   automatic: 0

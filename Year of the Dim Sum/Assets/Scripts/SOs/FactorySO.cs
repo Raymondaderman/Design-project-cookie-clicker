@@ -4,7 +4,7 @@ using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "FactorySO", menuName = "Scriptable Objects/FactorySO")]
 public class FactorySO : ScriptableObject {
-	[SerializeField]         string nameText;
+	[Header("Base stats")]
 	[SerializeField]         int    cost;
 	[SerializeField]         int    costIncrement;
 	[SerializeField]         float  earnings;
@@ -17,7 +17,6 @@ public class FactorySO : ScriptableObject {
 	[SerializeField] private int   upgradeMultiplier = 1;
 	[SerializeField] private float upgradeCost;
 
-	[SerializeField] Sprite    sprite;
 	public           bool      automatic;
 	public           Coroutine makeMoneyCoroutine;
 	public           int       Cost()     => cost            + costIncrement    * level;
