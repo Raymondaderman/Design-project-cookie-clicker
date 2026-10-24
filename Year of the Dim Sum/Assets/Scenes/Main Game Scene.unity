@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeButton
   upgradeCostMultiplier: 2
-  maxUpgradeAmount: 10
+  maxUpgradeAmount: 9
   affectedFactory: {fileID: 11400000, guid: 4f3fe338abcb3384fac3f6b201b5db67, type: 2}
   upgradeName: {fileID: 1912831631}
   upgradeMultiplier: {fileID: 1449608440}
@@ -1822,8 +1822,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 1160015160}
   - {fileID: 586781893}
+  - {fileID: 1160015160}
   - {fileID: 5074573582877256713}
   - {fileID: 371990969358198690}
   - {fileID: 614808539}

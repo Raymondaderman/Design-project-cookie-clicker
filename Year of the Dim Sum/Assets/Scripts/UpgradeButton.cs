@@ -16,14 +16,14 @@ public class UpgradeButton : MonoBehaviour {
 
 	private void Awake() {
 		upgradeName.text       = affectedFactory.name;
-		upgradeMultiplier.text = (affectedFactory.UpgradeMultiplier - 1).ToString();
+		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier.ToString();
 		upgradeCost.text       = affectedFactory.UpgradeCost.ToString();
 	}
 
 
 	public void PurchaseUpgrade() {
-		if (affectedFactory.UpgradeAmount   > maxUpgradeAmount) return;
-		if (GameManager.Instance.CoinAmount < affectedFactory.UpgradeCost) return;
+		if (affectedFactory.UpgradeAmount >= maxUpgradeAmount) return;
+		if (affectedFactory.UpgradeCost   > GameManager.Instance.CoinAmount) return;
 
 		GameManager.Instance.CoinAmount -= affectedFactory.UpgradeCost;
 
