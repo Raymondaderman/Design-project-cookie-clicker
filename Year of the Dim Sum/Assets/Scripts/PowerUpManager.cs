@@ -15,9 +15,6 @@ public class PowerUpManager : MonoBehaviour {
 		if (Instance == null) Instance = this;
 	}
 
-	private void Update() {
-	}
-
 	private FortuneCookiePowerUpSO RandomPowerUp() {
 		Debug.Log("Entered PowerUp generator");
 		var totalTickets = 0;

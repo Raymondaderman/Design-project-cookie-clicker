@@ -16,8 +16,8 @@ public class UpgradeButton : MonoBehaviour {
 
 	private void Awake() {
 		upgradeName.text       = affectedFactory.name;
-		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier.ToString();
-		upgradeCost.text       = affectedFactory.UpgradeCost.ToString();
+		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
+		upgradeCost.text       = affectedFactory.UpgradeCost       + " Coins";
 	}
 
 
@@ -33,7 +33,7 @@ public class UpgradeButton : MonoBehaviour {
 		affectedFactory.UpgradeMultiplier++;
 
 		upgradeName.text       = affectedFactory.name;
-		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier.ToString();
-		upgradeCost.text       = affectedFactory.UpgradeCost.ToString();
+		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
+		upgradeCost.text       = affectedFactory.UpgradeCost       + " Coins";
 	}
 }

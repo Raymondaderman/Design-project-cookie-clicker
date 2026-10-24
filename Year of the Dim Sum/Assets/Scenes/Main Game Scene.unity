@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 1177879286}
   - component: {fileID: 1177879287}
   m_Layer: 5
-  m_Name: SunMoonUpgrade_Button
+  m_Name: MooncakeUpgrade_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1035,6 +1035,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449608438}
   m_CullTransparentMesh: 1
+--- !u!1001 &1567992947
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 33.143402
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 33.143402
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 33.143402
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2407
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 531
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419842768765833405, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816644410986703945, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_Name
+      value: Lantern
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801726811502383143, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -30.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801726811502383143, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.54
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f4314c94c902ab049ada3b93355df68a, type: 3}
 --- !u!1 &1727676802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,9 +1638,17 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1380505490601628366, guid: 818e5d3278fae8047b06a68bb6599d72, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2381602069334925599, guid: 818e5d3278fae8047b06a68bb6599d72, type: 3}
       propertyPath: m_Name
       value: Sun_Moon_Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971863847429223735, guid: 818e5d3278fae8047b06a68bb6599d72, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8283688433753143798, guid: 818e5d3278fae8047b06a68bb6599d72, type: 3}
       propertyPath: m_Pivot.x
@@ -1666,9 +1751,65 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 641937190626180731, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172040647338338404, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172040647338338404, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172040647338338404, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273481993693053292, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2722127805199821931, guid: 152417f007c264c47aadc926c35389c8, type: 3}
       propertyPath: m_Name
       value: Parallax_Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3235601412555856086, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_BlockingObjects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3235601412555856086, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3235601412555856086, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_IgnoreReversedGraphics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398517705650764670, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329635428947488355, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329635428947488355, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329635428947488355, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329635428947488355, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5227611864468890405, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_FillCenter
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6658176979096485262, guid: 152417f007c264c47aadc926c35389c8, type: 3}
       propertyPath: m_Pivot.x
@@ -1700,6 +1841,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6658176979096485262, guid: 152417f007c264c47aadc926c35389c8, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658176979096485262, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658176979096485262, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658176979096485262, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6658176979096485262, guid: 152417f007c264c47aadc926c35389c8, type: 3}
@@ -1831,3 +1984,4 @@ SceneRoots:
   - {fileID: 5261252222748464700}
   - {fileID: 1143476501}
   - {fileID: 1939382024}
+  - {fileID: 1567992947}

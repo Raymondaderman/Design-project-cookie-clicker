@@ -12,6 +12,7 @@ public class SunMoonAnimationEvents : MonoBehaviour {
 	[SerializeField] private Light2D[]    lights;
 
 	private void Awake() {
+		LeanTween.reset();
 		lanterns = GameObject.FindGameObjectsWithTag("Lantern");
 		lights   = new Light2D[lanterns.Length];
 		for (var i = 0; i < lanterns.Length; i++) {
@@ -24,7 +25,7 @@ public class SunMoonAnimationEvents : MonoBehaviour {
 		GameManager.Instance.IsDay = false;
 		LeanTween.alphaCanvas(backgroundTintCanvasGroup, 1, tintChangeTime).setEaseOutExpo();
 		foreach (var light in lights) {
-			LeanTween.value(gameObject, 0, lightIntensity, tintChangeTime).setEaseOutExpo()
+			LeanTween.value(light.gameObject, 0, lightIntensity, tintChangeTime).setEaseOutExpo()
 			         .setOnUpdate(val => { light.intensity = val; });
 		}
 	}
@@ -34,7 +35,7 @@ public class SunMoonAnimationEvents : MonoBehaviour {
 		GameManager.Instance.IsDay = true;
 		LeanTween.alphaCanvas(backgroundTintCanvasGroup, 0, tintChangeTime).setEaseOutExpo();
 		foreach (var light in lights) {
-			LeanTween.value(gameObject, lightIntensity, 0, tintChangeTime).setEaseOutExpo()
+			LeanTween.value(light.gameObject, lightIntensity, 0, tintChangeTime).setEaseOutExpo()
 			         .setOnUpdate(val => { light.intensity = val; });
 		}
 	}
