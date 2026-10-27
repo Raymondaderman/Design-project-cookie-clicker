@@ -17,14 +17,6 @@ public class FactoryManager : MonoBehaviour {
 		gameManager = FindFirstObjectByType<GameManager>();
 	}
 
-	private void Update() {
-		foreach (FactorySO factory in factories) {
-			if (factory.automatic) {
-				factory.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factory, null, null));
-			}
-		}
-	}
-
 	public void MakeMoney(FactorySO factory) {
 		factoryInstance = factory;
 	}
@@ -96,7 +88,6 @@ public class FactoryManager : MonoBehaviour {
 				}
 		}
 	}
-
 	private IEnumerator MakeMoneyCoroutine(FactorySO factory, Image fillImage, TextMeshProUGUI cooldownText) {
 		float time = 0;
 		while (time < factory.Cooldown()) {
@@ -113,5 +104,36 @@ public class FactoryManager : MonoBehaviour {
 		cooldownText.text          =  Math.Round(factory.Cooldown(), 1) + " sec";
 		gameManager.CoinAmount     += factory.Earnings;
 		factory.makeMoneyCoroutine =  null;
+	}
+	
+	public void MakeAutomatic(FactorySO factory) {
+		factoryInstance = factory;
+	}
+	public void MakeAutomaticGraphics(GameObject factory) {
+		Image           fillImage    = null;
+		TextMeshProUGUI cooldownText = null;
+		foreach (Image i in factory.GetComponentsInChildren<Image>()) {
+			if (i.CompareTag("CooldownImage")) {
+				fillImage = i;
+				break;
+			}
+		}
+		foreach (TextMeshProUGUI t in factory.GetComponentsInChildren<TextMeshProUGUI>()) {
+			if (t.CompareTag("CooldownText")) {
+				cooldownText = t;
+				break;
+			}
+		}
+		StartCoroutine(MakeAutomaticCoroutine(factoryInstance, fillImage, cooldownText));
+	}
+	private IEnumerator MakeAutomaticCoroutine(FactorySO factory, Image fillImage, TextMeshProUGUI cooldownText) {
+		cooldownText.text = (Math.Round(factory.Earnings / factory.Cooldown(), 1) + " coins / sec");
+// nåt sånt		fillImage.GetComponent<Animation>().Play();
+		while (true) {
+			yield return new WaitForSeconds(factory.Cooldown());
+			gameManager.CoinAmount     += factory.Earnings;
+			yield return null;
+		} 
+		;
 	}
 }
