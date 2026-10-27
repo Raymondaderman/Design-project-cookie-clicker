@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private float coinAmount;
 	[SerializeField] private bool isDay;
 
-	private Vector2 mouseVector;
+	[SerializeField] private Vector2 mouseVector;
 
 	[Header("TMP")]
 	[SerializeField] private TextMeshProUGUI coinDisplay;
@@ -40,6 +40,5 @@ public class GameManager : MonoBehaviour {
 
 	private void OnMousePosition(InputValue value) {
 		mouseVector = value.Get<Vector2>();
-		mouseVector = Camera.main.ScreenToWorldPoint(mouseVector);
 	}
 }

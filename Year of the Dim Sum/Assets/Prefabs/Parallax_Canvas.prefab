@@ -48,7 +48,7 @@ Canvas:
   m_GameObject: {fileID: 2722127805199821931}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!1001 &434449431915092382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,13 +111,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6658176979096485262}
     m_Modifications:
+    - target: {fileID: 883906383350543382, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 891312279221450521, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1604571978595889658, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: m_Alpha
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1604571978595889658, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604571978595889658, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2083644887722132249, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: m_Name
       value: Background_Parallax
+      objectReference: {fileID: 0}
+    - target: {fileID: 4184562101147613181, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196194329088965263, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659701194271128251, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5674620265286940965, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: m_Pivot.x
@@ -193,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5674620265286940965, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5674620265286940965, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -211,15 +239,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6759432820000987173, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7046617840773296282, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: mouseSpeedX
-      value: 1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7046617840773296282, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: mouseSpeedY
-      value: 1
+      value: 0.008
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1419760723892829695, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
