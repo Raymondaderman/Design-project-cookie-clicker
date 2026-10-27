@@ -1,12 +1,15 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour {
 	public static GameManager Instance;
 	[Header("General Information")]
 	[SerializeField] private float coinAmount;
 	[SerializeField] private bool isDay;
+
+	private Vector2 mouseVector;
 
 	[Header("TMP")]
 	[SerializeField] private TextMeshProUGUI coinDisplay;
@@ -20,6 +23,7 @@ public class GameManager : MonoBehaviour {
 		get => isDay;
 		set => isDay = value;
 	}
+	public Vector2 MouseVector => mouseVector;
 
 
 	private void Awake() {
@@ -33,5 +37,9 @@ public class GameManager : MonoBehaviour {
 	private void Update() {
 		//coinDisplay.text="Coins: " + coinAmount;	
 	}
-}
 
+	private void OnMousePosition(InputValue value) {
+		mouseVector = value.Get<Vector2>();
+		mouseVector = Camera.main.ScreenToWorldPoint(mouseVector);
+	}
+}

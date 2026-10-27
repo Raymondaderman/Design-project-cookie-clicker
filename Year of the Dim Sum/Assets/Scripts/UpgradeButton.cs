@@ -7,6 +7,7 @@ public class UpgradeButton : MonoBehaviour {
 	[SerializeField] private float upgradeCostMultiplier;
 	[SerializeField] private float     maxUpgradeAmount;
 	[SerializeField] private FactorySO affectedFactory;
+	[SerializeField] private AudioClip buttonSound;
 
 	[Header("Button Visuals")]
 	[SerializeField] private TextMeshProUGUI upgradeName;
@@ -22,6 +23,7 @@ public class UpgradeButton : MonoBehaviour {
 
 
 	public void PurchaseUpgrade() {
+		AudioManager.Instance.PlayASound(buttonSound, 1f);
 		if (affectedFactory.UpgradeAmount >= maxUpgradeAmount) return;
 		if (affectedFactory.UpgradeCost   > GameManager.Instance.CoinAmount) return;
 

@@ -6,13 +6,15 @@ public class SunMoonManager : MonoBehaviour {
 	public static            SunMoonManager Instance;
 	[SerializeField] private float          clickAmount;
 	[SerializeField] private int            dayCycleTime;
-	
+	[SerializeField] private ParticleSystem clickParticles;
+
 	[SerializeField] private AudioClip clickSound;
-	private                  float          cycleTimer;
-	
+
 	[SerializeField] private Animator sunMoonAnimator;
-	
-	
+
+	private float cycleTimer;
+
+
 	public float ClickAmount {
 		get => clickAmount;
 		set => clickAmount = value;
@@ -43,6 +45,8 @@ public class SunMoonManager : MonoBehaviour {
 
 	public void OnClick() {
 		AudioManager.Instance.PlayASound(clickSound, 1);
+		var clickEffect = Instantiate(clickParticles, GameManager.Instance.MouseVector, Quaternion.identity);
+		clickEffect.Play();
 		if (GameManager.Instance.IsDay) GameManager.Instance.CoinAmount += clickAmount;
 		else GameManager.Instance.CoinAmount                            += clickAmount * 2;
 		Debug.Log("Moon/Sun clicked");
