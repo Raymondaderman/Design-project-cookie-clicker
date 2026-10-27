@@ -12,6 +12,7 @@ TagManager:
   - CooldownImage
   - InitialUpgradeButton
   - FactoryComponents
+  - NameText
   layers:
   - Default
   - TransparentFX

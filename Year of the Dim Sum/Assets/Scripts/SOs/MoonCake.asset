@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d310f969c92c104a9c3ad16baf66251, type: 3}
   m_Name: MoonCake
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
+  name: Mooncake
   cost: 0
   costIncrement: 2
   earnings: 10

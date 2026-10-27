@@ -1,139 +1,88 @@
 using System;
-using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class FactoryManager : MonoBehaviour {
-	[SerializeField] private FactorySO[] factories;
+	[SerializeField] public  FactorySO       SO;
+	[SerializeField] private SpriteRenderer  spriteRenderer;
+	[SerializeField] private TextMeshProUGUI nameText;
+	[SerializeField] private TextMeshProUGUI earningsText;
+	[SerializeField] private TextMeshProUGUI cooldownText;
+	[SerializeField] private TextMeshProUGUI costText;
+	[SerializeField] private Image           cooldownFillImage;
 
-	private bool initialUnlock;
-	private bool levelUp;
+	GameManager gameManager;
 
-	private GameManager gameManager;
-	private FactorySO   factoryInstance;
-
-	void Start() {
-		gameManager = FindFirstObjectByType<GameManager>();
-	}
-
-	public void MakeMoney(FactorySO factory) {
-		factoryInstance = factory;
-	}
-
-	public void MakeMoneyGraphics(GameObject factory) {
-		Image fillImage = null;
-		TextMeshProUGUI cooldownText = null;
-		foreach (Image i in factory.GetComponentsInChildren<Image>()) {
-			if (i.CompareTag("CooldownImage")) {
-				fillImage = i;
-				break;
-			}
-		}
-		foreach (TextMeshProUGUI t in factory.GetComponentsInChildren<TextMeshProUGUI>()) {
-			if (t.CompareTag("CooldownText")) {
-				cooldownText = t;
-				break;
-			}
-		}
-		factoryInstance.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factoryInstance, fillImage, cooldownText));
+	private void Start() {
+		gameManager           = FindAnyObjectByType<GameManager>();
+		spriteRenderer.sprite = SO.Sprite();
+		nameText.text         = SO.Name();
+		earningsText.text     = SO.Earnings.ToString();
+		cooldownText.text     = Math.Round(SO.Cooldown(), 1).ToString();
+		costText.text         = SO.Cost().ToString();
 	}
 
 	public void ActivateFactory(GameObject factory) {
 		factory.gameObject.SetActive(true);
 	}
-	
+
+	public void DeactivateButton(GameObject button) {
+		Destroy(button);
+	}
+
 	public void LevelUp(FactorySO factory) {
-		if (gameManager.CoinAmount >= factory.Cost() && factory.Level<factory.MaxLevel()) {
-			factoryInstance        =  factory;
-			levelUp                =  true;
-			initialUnlock          =  factory.Level == 0;
+		if (gameManager.CoinAmount >= factory.Cost() && factory.Level < factory.MaxLevel()) {
 			gameManager.CoinAmount -= factory.Cost();
-			factory.Level++;
+			SO.Level++;
+			costText.text = SO.Cost().ToString();
+			if (SO.makeMoneyCoroutine != null) cooldownText.text = Math.Round(SO.Cooldown(), 1).ToString();
 		}
 	}
 
-	
-	public void LevelUpText(GameObject factoryObject) {
-		StartCoroutine(LevelUpCoroutine(factoryObject));
+	#region MakeMoney
+
+	public void MakeMoney(FactorySO factory) {
+		factory.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factory));
 	}
 
-	IEnumerator LevelUpCoroutine(GameObject factoryObject) {
-		yield return new WaitForEndOfFrame();
-		if (initialUnlock) {
-			foreach (Button b in factoryObject.GetComponentsInChildren<Button>()) {
-				if (b.CompareTag("InitialUpgradeButton")) {
-					Destroy(b.gameObject);
-					break;
-				}
-			}
-		}
-
-		if (levelUp) {
-			string[] tags = { "LevelText", "CostText", "EarningsText", "CooldownText" };
-			string[] text = {
-				(factoryInstance.Level-1).ToString(), "Cost: " + factoryInstance.Cost(),
-				"Earn: " + factoryInstance.Earnings, Math.Round(factoryInstance.Cooldown(), 1) + " sec"
-			};
-
-			TextMeshProUGUI[] texts = factoryObject.GetComponentsInChildren<TextMeshProUGUI>();
-			foreach (TextMeshProUGUI t in texts)
-				for (int i = 0; i < tags.Length; i++) {
-					if (t.CompareTag(tags[i])) {
-						if (i != 3 | factoryInstance.makeMoneyCoroutine == null) {
-							t.text = text[i];
-							break;
-						}
-					}
-				}
-		}
-	}
-	private IEnumerator MakeMoneyCoroutine(FactorySO factory, Image fillImage, TextMeshProUGUI cooldownText) {
+	private IEnumerator MakeMoneyCoroutine(FactorySO factory) {
 		float time = 0;
 		while (time < factory.Cooldown()) {
 			if (!factory.automatic) {
-				fillImage.fillAmount = time / factory.Cooldown();
-				cooldownText.text    = Math.Round(factory.Cooldown() - time, 1)+ " sec";
+				cooldownFillImage.fillAmount = time / factory.Cooldown();
+				cooldownText.text            = Math.Round(factory.Cooldown() - time, 1) + " sec";
 			}
+
 			time += Time.deltaTime;
-			
+
 			yield return null;
 		}
 
-		fillImage.fillAmount       =  0;
-		cooldownText.text          =  Math.Round(factory.Cooldown(), 1) + " sec";
-		gameManager.CoinAmount     += factory.Earnings;
-		factory.makeMoneyCoroutine =  null;
+		cooldownFillImage.fillAmount =  0;
+		cooldownText.text            =  Math.Round(factory.Cooldown(), 1) + " sec";
+		gameManager.CoinAmount       += factory.Earnings;
+		factory.makeMoneyCoroutine   =  null;
 	}
-	
-	public void MakeAutomatic(FactorySO factory) {
-		factoryInstance = factory;
+
+	#endregion
+
+	#region MakeAutomatic
+
+	public void MakeAutomatic() {
+		StartCoroutine(MakeAutomaticCoroutine(SO));
 	}
-	public void MakeAutomaticGraphics(GameObject factory) {
-		Image           fillImage    = null;
-		TextMeshProUGUI cooldownText = null;
-		foreach (Image i in factory.GetComponentsInChildren<Image>()) {
-			if (i.CompareTag("CooldownImage")) {
-				fillImage = i;
-				break;
-			}
-		}
-		foreach (TextMeshProUGUI t in factory.GetComponentsInChildren<TextMeshProUGUI>()) {
-			if (t.CompareTag("CooldownText")) {
-				cooldownText = t;
-				break;
-			}
-		}
-		StartCoroutine(MakeAutomaticCoroutine(factoryInstance, fillImage, cooldownText));
-	}
-	private IEnumerator MakeAutomaticCoroutine(FactorySO factory, Image fillImage, TextMeshProUGUI cooldownText) {
+
+	private IEnumerator MakeAutomaticCoroutine(FactorySO factory) {
 		cooldownText.text = (Math.Round(factory.Earnings / factory.Cooldown(), 1) + " coins / sec");
 // nåt sånt		fillImage.GetComponent<Animation>().Play();
 		while (true) {
 			yield return new WaitForSeconds(factory.Cooldown());
-			gameManager.CoinAmount     += factory.Earnings;
+			gameManager.CoinAmount += factory.Earnings;
 			yield return null;
-		} 
-		;
+		}
+
+		#endregion
 	}
 }
