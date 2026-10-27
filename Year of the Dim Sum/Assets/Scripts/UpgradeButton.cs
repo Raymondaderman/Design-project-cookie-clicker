@@ -7,6 +7,7 @@ public class UpgradeButton : MonoBehaviour {
 	[SerializeField] private float upgradeCostMultiplier;
 	[SerializeField] private float     maxUpgradeAmount;
 	[SerializeField] private FactorySO affectedFactory;
+	[SerializeField] private AudioClip buttonSound;
 
 	[Header("Button Visuals")]
 	[SerializeField] private TextMeshProUGUI upgradeName;
@@ -16,14 +17,15 @@ public class UpgradeButton : MonoBehaviour {
 
 	private void Awake() {
 		upgradeName.text       = affectedFactory.name;
-		upgradeMultiplier.text = (affectedFactory.UpgradeMultiplier - 1).ToString();
-		upgradeCost.text       = affectedFactory.UpgradeCost.ToString();
+		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
+		upgradeCost.text       = affectedFactory.UpgradeCost       + " Coins";
 	}
 
 
 	public void PurchaseUpgrade() {
-		if (affectedFactory.UpgradeAmount   > maxUpgradeAmount) return;
-		if (GameManager.Instance.CoinAmount < affectedFactory.UpgradeCost) return;
+		AudioManager.Instance.PlayASound(buttonSound, 1f);
+		if (affectedFactory.UpgradeAmount >= maxUpgradeAmount) return;
+		if (affectedFactory.UpgradeCost   > GameManager.Instance.CoinAmount) return;
 
 		GameManager.Instance.CoinAmount -= affectedFactory.UpgradeCost;
 
@@ -33,7 +35,7 @@ public class UpgradeButton : MonoBehaviour {
 		affectedFactory.UpgradeMultiplier++;
 
 		upgradeName.text       = affectedFactory.name;
-		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier.ToString();
-		upgradeCost.text       = affectedFactory.UpgradeCost.ToString();
+		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
+		upgradeCost.text       = affectedFactory.UpgradeCost       + " Coins";
 	}
 }
