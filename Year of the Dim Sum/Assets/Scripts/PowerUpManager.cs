@@ -39,6 +39,7 @@ public class PowerUpManager : MonoBehaviour {
 
 		Instantiate(powerUpPopupPrefab, powerUpPopupPrefab.transform.position, powerUpPopupPrefab.transform.rotation,
 		            fortuneCookieCanvas.transform);
+		if (!powerUp.IsClickPowerUp && powerUp.AffectedFactory.Length == 0) yield return null;
 
 
 		if (powerUp.IsClickPowerUp) {
@@ -46,10 +47,9 @@ public class PowerUpManager : MonoBehaviour {
 			yield return new WaitForSeconds(powerUp.Duration);
 			SunMoonManager.Instance.ClickAmount /= powerUp.Multiplier;
 		} else {
-			var factorySo = powerUp.AffectedFactory;
-			factorySo.Earnings *= powerUp.Multiplier;
+			foreach (var factory in powerUp.AffectedFactory) factory.Earnings *= powerUp.Multiplier;
 			yield return new WaitForSeconds(powerUp.Duration);
-			factorySo.Earnings /= powerUp.Multiplier;
+			foreach (var factory in powerUp.AffectedFactory) factory.Earnings /= powerUp.Multiplier;
 		}
 
 		yield return null;

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5174a40e1431a45829938a5a6094b2, type: 3}
   m_Name: ClickGodPowerUp
   m_EditorClassIdentifier: Assembly-CSharp::FortuneCookiePowerUpSO
-  affectedFactory: {fileID: 0}
+  affectedFactory:
+  - {fileID: 0}
   powerUpName: Click god
   multiplier: 100
   duration: 5
-  rarity: 1
-  powerUpDescription: Clicks are multiplied by 100x.
+  rarity: 2
+  powerUpDescription: Click income is multiplied by 100x for 5s.
   isClickPowerUp: 1

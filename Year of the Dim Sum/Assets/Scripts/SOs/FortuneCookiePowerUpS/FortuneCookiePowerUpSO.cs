@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "FortuneCookiePowerUpSO", menuName = "Scriptable Objects/FortuneCookiePowerUpSO")]
 public class FortuneCookiePowerUpSO : ScriptableObject {
-	[SerializeField]            private FactorySO affectedFactory;
+	[SerializeField]            private FactorySO[] affectedFactory;
 	[SerializeField]            private string    powerUpName;
 	[SerializeField]            private float     multiplier;
 	[SerializeField]            private float     duration;
@@ -12,7 +12,7 @@ public class FortuneCookiePowerUpSO : ScriptableObject {
 	[SerializeField] [TextArea] private string    powerUpDescription;
 	[SerializeField]            private bool      isClickPowerUp;
 
-	public FactorySO AffectedFactory    => affectedFactory;
+	public FactorySO[] AffectedFactory    => affectedFactory;
 	public string    PowerUpName        => powerUpName;
 	public float     Multiplier         => multiplier;
 	public float     Duration           => duration;

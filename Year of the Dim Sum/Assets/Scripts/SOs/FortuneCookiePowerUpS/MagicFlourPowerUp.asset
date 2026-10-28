@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a5174a40e1431a45829938a5a6094b2, type: 3}
-  m_Name: DoubleClick
+  m_Name: MagicFlourPowerUp
   m_EditorClassIdentifier: Assembly-CSharp::FortuneCookiePowerUpSO
-  affectedFactory: {fileID: 0}
-  powerUpName: DoubleClick
+  affectedFactory: []
+  powerUpName: Magic flour
   multiplier: 2
   duration: 30
   rarity: 6
-  powerUpDescription: Clicks are multipled 2x.
-  isClickPowerUp: 1
+  powerUpDescription: 'Pastry income is multiplied by 2 for 30s. '
+  isClickPowerUp: 0
