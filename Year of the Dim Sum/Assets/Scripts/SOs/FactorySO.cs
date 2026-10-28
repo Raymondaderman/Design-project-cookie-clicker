@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "FactorySO", menuName = "Scriptable Objects/FactorySO")]
 public class FactorySO : ScriptableObject {

@@ -19,6 +19,7 @@ MonoBehaviour:
   cooldown: 2
   level: 0
   maxLevel: 10
+  sprite: {fileID: 3316246628334969575, guid: 9961c88d1fef17b45a61a29075142239, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
   upgradeCost: 0

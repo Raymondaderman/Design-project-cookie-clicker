@@ -5,31 +5,34 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class FactoryManager : MonoBehaviour {
+	#region Variables
+
 	[SerializeField] public  FactorySO       SO;
-	[SerializeField] private SpriteRenderer  spriteRenderer;
+	[SerializeField] private Image           image;
 	[SerializeField] private TextMeshProUGUI nameText;
 	[SerializeField] private TextMeshProUGUI earningsText;
 	[SerializeField] private TextMeshProUGUI cooldownText;
 	[SerializeField] private TextMeshProUGUI costText;
 	[SerializeField] private Image           cooldownFillImage;
+	[SerializeField] private Button          button;
 
 	GameManager gameManager;
 
 	private void Start() {
-		gameManager           = FindAnyObjectByType<GameManager>();
-		spriteRenderer.sprite = SO.Sprite();
-		nameText.text         = SO.Name();
-		earningsText.text     = SO.Earnings.ToString();
-		cooldownText.text     = Math.Round(SO.Cooldown(), 1).ToString();
-		costText.text         = SO.Cost().ToString();
+		gameManager       = FindAnyObjectByType<GameManager>();
+		image.sprite      = SO.Sprite();
+		nameText.text     = SO.Name();
+		earningsText.text = SO.Earnings.ToString();
+		cooldownText.text = Math.Round(SO.Cooldown(), 1).ToString();
+		costText.text     = SO.Cost().ToString();
 	}
 
-	public void ActivateFactory(GameObject factory) {
-		factory.gameObject.SetActive(true);
-	}
+	#endregion
+	#region LevelUp
 
-	public void DeactivateButton(GameObject button) {
+	public void UnlockFactory(GameObject factory) {
 		Destroy(button);
+		factory.gameObject.SetActive(true);
 	}
 
 	public void LevelUp(FactorySO factory) {
@@ -41,6 +44,7 @@ public class FactoryManager : MonoBehaviour {
 		}
 	}
 
+	#endregion
 	#region MakeMoney
 
 	public void MakeMoney(FactorySO factory) {
@@ -67,7 +71,6 @@ public class FactoryManager : MonoBehaviour {
 	}
 
 	#endregion
-
 	#region MakeAutomatic
 
 	public void MakeAutomatic() {
@@ -83,6 +86,6 @@ public class FactoryManager : MonoBehaviour {
 			yield return null;
 		}
 
-		#endregion
 	}
+	#endregion
 }
