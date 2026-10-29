@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nothing happened lol.
+  m_text: Click income is multipled 2x for 30s.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a29791ce89c49544ebc5c255cd07a2ca, type: 2}
   m_sharedMaterial: {fileID: -1631723959696745798, guid: a29791ce89c49544ebc5c255cd07a2ca, type: 2}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: L bozo
+  m_text: Doubleclick
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a29791ce89c49544ebc5c255cd07a2ca, type: 2}
   m_sharedMaterial: {fileID: -1631723959696745798, guid: a29791ce89c49544ebc5c255cd07a2ca, type: 2}
@@ -312,7 +312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1641.5994, y: 130.42847}
+  m_AnchoredPosition: {x: 1788.8617, y: 1010.2868}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1672716620665416265

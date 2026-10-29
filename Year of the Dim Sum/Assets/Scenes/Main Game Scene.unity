@@ -502,6 +502,10 @@ PrefabInstance:
       propertyPath: currentTime
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6426391196344321115, guid: ede51716319006f4fa3be202106925aa, type: 3}
+      propertyPath: timeToRespawn
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7539052513991754917, guid: ede51716319006f4fa3be202106925aa, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -1032,6 +1036,14 @@ PrefabInstance:
     - target: {fileID: 6658176979096485262, guid: 152417f007c264c47aadc926c35389c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479886222644717828, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: mouseSpeedX
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479886222644717828, guid: 152417f007c264c47aadc926c35389c8, type: 3}
+      propertyPath: mouseSpeedY
+      value: 0.009
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

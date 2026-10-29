@@ -17,5 +17,5 @@ MonoBehaviour:
   multiplier: 2
   duration: 30
   rarity: 6
-  powerUpDescription: 'Pastry income is multiplied by 2 for 30s. '
+  powerUpDescription: 'Pastry income is multiplied by 2x for 30s. '
   isClickPowerUp: 0
