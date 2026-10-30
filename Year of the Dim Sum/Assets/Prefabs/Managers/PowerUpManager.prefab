@@ -49,3 +49,5 @@ MonoBehaviour:
   fortuneCookiePowerUps:
   - {fileID: 11400000, guid: bd144c3b64e60e3498992a4037d0b3ac, type: 2}
   - {fileID: 11400000, guid: dbd316960d8033a4a8e1588c2b16f3c4, type: 2}
+  - {fileID: 11400000, guid: 130721f2b9f09bf438526c1bb915a787, type: 2}
+  - {fileID: 11400000, guid: 44aa992fee8b64c4db05e2ebd29e7299, type: 2}

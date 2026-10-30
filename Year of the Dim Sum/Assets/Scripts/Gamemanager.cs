@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	private void Update() {
-		//coinDisplay.text="Coins: " + coinAmount;	
+		coinDisplay.text = "CoinAmount: " + coinAmount;
 	}
 
 	private void OnMousePosition(InputValue value) {

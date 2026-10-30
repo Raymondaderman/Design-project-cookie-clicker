@@ -14,7 +14,7 @@ public class FactoryManager : MonoBehaviour {
 	[SerializeField] private TextMeshProUGUI cooldownText;
 	[SerializeField] private TextMeshProUGUI costText;
 	[SerializeField] private Image           cooldownFillImage;
-	[SerializeField] private Button          button;
+	[SerializeField] private GameObject      buttonGameObject;
 
 	GameManager gameManager;
 
@@ -28,26 +28,30 @@ public class FactoryManager : MonoBehaviour {
 	}
 
 	#endregion
+
 	#region LevelUp
 
 	public void UnlockFactory(GameObject factory) {
-		Destroy(button);
 		factory.gameObject.SetActive(true);
+		Destroy(buttonGameObject);
 	}
 
 	public void LevelUp(FactorySO factory) {
 		if (gameManager.CoinAmount >= factory.Cost() && factory.Level < factory.MaxLevel()) {
 			gameManager.CoinAmount -= factory.Cost();
 			SO.Level++;
-			costText.text = SO.Cost().ToString();
+			costText.text = factory.Level == factory.MaxLevel() ? "Max" : SO.Cost().ToString();
+			if (factory.Level         == factory.MaxLevel()) StartCoroutine(MakeAutomaticCoroutine(factory));
 			if (SO.makeMoneyCoroutine != null) cooldownText.text = Math.Round(SO.Cooldown(), 1).ToString();
 		}
 	}
 
 	#endregion
+
 	#region MakeMoney
 
 	public void MakeMoney(FactorySO factory) {
+		if (factory.automatic) return;
 		factory.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factory));
 	}
 
@@ -56,7 +60,7 @@ public class FactoryManager : MonoBehaviour {
 		while (time < factory.Cooldown()) {
 			if (!factory.automatic) {
 				cooldownFillImage.fillAmount = time / factory.Cooldown();
-				cooldownText.text            = Math.Round(factory.Cooldown() - time, 1) + " sec";
+				cooldownText.text            = Math.Round(factory.Cooldown() - time, 1) + " Sec";
 			}
 
 			time += Time.deltaTime;
@@ -65,27 +69,25 @@ public class FactoryManager : MonoBehaviour {
 		}
 
 		cooldownFillImage.fillAmount =  0;
-		cooldownText.text            =  Math.Round(factory.Cooldown(), 1) + " sec";
+		cooldownText.text            =  Math.Round(factory.Cooldown(), 1) + " Sec";
 		gameManager.CoinAmount       += factory.Earnings;
 		factory.makeMoneyCoroutine   =  null;
 	}
 
 	#endregion
+
 	#region MakeAutomatic
 
-	public void MakeAutomatic() {
-		StartCoroutine(MakeAutomaticCoroutine(SO));
-	}
-
 	private IEnumerator MakeAutomaticCoroutine(FactorySO factory) {
-		cooldownText.text = (Math.Round(factory.Earnings / factory.Cooldown(), 1) + " coins / sec");
+		factory.automatic = true;
+		cooldownText.text = (Math.Round(factory.Earnings / factory.Cooldown(), 1) + " Coins / Sec");
 // nåt sånt		fillImage.GetComponent<Animation>().Play();
 		while (true) {
 			yield return new WaitForSeconds(factory.Cooldown());
 			gameManager.CoinAmount += factory.Earnings;
 			yield return null;
 		}
-
 	}
+
 	#endregion
 }

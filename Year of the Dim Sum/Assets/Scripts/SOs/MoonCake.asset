@@ -23,4 +23,4 @@ MonoBehaviour:
   upgradeAmount: 0
   upgradeMultiplier: 1
   upgradeCost: 0
-  automatic: 0
+  automatic: 1

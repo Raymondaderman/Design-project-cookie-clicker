@@ -245,11 +245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046617840773296282, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: mouseSpeedX
-      value: 0.01
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7046617840773296282, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}
       propertyPath: mouseSpeedY
-      value: 0.008
+      value: 0.009
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1419760723892829695, guid: 63453241e40a04f41b6ddc7dcd019373, type: 3}

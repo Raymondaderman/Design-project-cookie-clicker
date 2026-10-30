@@ -36,6 +36,6 @@ public class UpgradeButton : MonoBehaviour {
 
 		upgradeName.text       = affectedFactory.name;
 		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
-		upgradeCost.text       = affectedFactory.UpgradeCost       + " Coins";
+		upgradeCost.text       = "Cost"                            + affectedFactory.UpgradeCost + " Coins";
 	}
 }
