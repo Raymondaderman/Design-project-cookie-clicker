@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Boba
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
   name: Boba
-  unlockCost: 0
+  unlockCost: 1000
   cost: 20
   costIncrement: 5
-  earnings: 20
+  earnings: 10
   cooldown: 3
   level: 0
   maxLevel: 10

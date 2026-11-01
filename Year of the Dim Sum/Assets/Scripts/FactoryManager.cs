@@ -22,12 +22,12 @@ public class FactoryManager : MonoBehaviour {
 		gameManager       = FindAnyObjectByType<GameManager>();
 		image.sprite      = SO.Sprite();
 		nameText.text     = SO.Name();
-		earningsText.text = SO.Earnings.ToString();
+		earningsText.text = GameManager.Instance.ConvertedNumber(SO.Earnings);
 		cooldownText.text = Math.Round(SO.Cooldown(), 1).ToString();
-		costText.text     = SO.Cost().ToString();
-		
-		var unlockCost = buttonGameObject.GetComponentInChildren<TextMeshProUGUI>();
-		unlockCost.text = SO.UnlockCost.ToString();
+		costText.text     = GameManager.Instance.ConvertedNumber(SO.Cost());
+
+		var unlockCost                  = buttonGameObject.GetComponentInChildren<TextMeshProUGUI>();
+		unlockCost.text = costText.text = GameManager.Instance.ConvertedNumber(SO.UnlockCost);
 	}
 
 	#endregion
@@ -44,7 +44,7 @@ public class FactoryManager : MonoBehaviour {
 		if (gameManager.CoinAmount >= factory.Cost() && factory.Level < factory.MaxLevel()) {
 			gameManager.CoinAmount -= factory.Cost();
 			SO.Level++;
-			costText.text = factory.Level == factory.MaxLevel() ? "Max" : SO.Cost().ToString();
+			costText.text = factory.Level == factory.MaxLevel() ? "Max" : GameManager.Instance.ConvertedNumber(SO.Cost());
 			if (factory.Level         == factory.MaxLevel()) StartCoroutine(MakeAutomaticCoroutine(factory));
 			if (SO.makeMoneyCoroutine != null) cooldownText.text = Math.Round(SO.Cooldown(), 1).ToString();
 		}
@@ -55,6 +55,7 @@ public class FactoryManager : MonoBehaviour {
 	#region MakeMoney
 
 	public void MakeMoney(FactorySO factory) {
+		Debug.Log("Make Money Pressed");
 		if (factory.automatic) return;
 		factory.makeMoneyCoroutine ??= StartCoroutine(MakeMoneyCoroutine(factory));
 	}
@@ -83,9 +84,9 @@ public class FactoryManager : MonoBehaviour {
 	#region MakeAutomatic
 
 	private IEnumerator MakeAutomaticCoroutine(FactorySO factory) {
-		factory.automatic = true;
-		cooldownText.text = (Math.Round(factory.Earnings / factory.Cooldown(), 1) + " Coins / Sec");
-// nåt sånt		fillImage.GetComponent<Animation>().Play();
+		factory.automatic            = true;
+		cooldownText.text            = (Math.Round(factory.Earnings / factory.Cooldown(), 1) + " Coins / Sec");
+		cooldownFillImage.fillAmount = 100;
 		while (true) {
 			yield return new WaitForSeconds(factory.Cooldown());
 			gameManager.CoinAmount += factory.Earnings;

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d310f969c92c104a9c3ad16baf66251, type: 3}
-  m_Name: StrawberryMochi
+  m_Name: HataDrink
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
-  name: Strawberry mochi
+  name: Hata drink
   unlockCost: 0
   cost: 20
   costIncrement: 5
@@ -20,7 +20,7 @@ MonoBehaviour:
   cooldown: 3
   level: 0
   maxLevel: 10
-  sprite: {fileID: 6608794962519191589, guid: 7fd77912efac02741b7481bb13eb44bc, type: 3}
+  sprite: {fileID: 9130910393748812158, guid: b9d58724143570845903249523a55153, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
   upgradeCost: 0

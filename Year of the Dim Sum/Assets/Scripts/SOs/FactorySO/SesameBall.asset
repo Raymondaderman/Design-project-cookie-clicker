@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d310f969c92c104a9c3ad16baf66251, type: 3}
-  m_Name: SesameBalls
+  m_Name: SesameBall
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
-  name: Sesame balls
-  unlockCost: 0
+  name: Sesameball
+  unlockCost: 50000
   cost: 20
   costIncrement: 5
   earnings: 10
