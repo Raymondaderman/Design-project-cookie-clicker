@@ -42,9 +42,9 @@ public class UpgradeButton : MonoBehaviour {
 			SunMoonManager.Instance.UpgradeAmount++;
 			SunMoonManager.Instance.UpgradeMultiplier++;
 
-			upgradeName.text       = "Sun/Moon";
+			upgradeName.text = "Sun/Moon";
 			upgradeMultiplier.text = SunMoonManager.Instance.UpgradeMultiplier + "X";
-			upgradeCost.text       = "Cost:"                                   + SunMoonManager.Instance.UpgradeCost;
+			upgradeCost.text = "Cost:" + GameManager.Instance.ConvertedNumber(SunMoonManager.Instance.UpgradeCost);
 		} else {
 			if (affectedFactory.UpgradeAmount >= maxUpgradeAmount) return;
 			if (affectedFactory.UpgradeCost   > GameManager.Instance.CoinAmount) return;
@@ -58,7 +58,7 @@ public class UpgradeButton : MonoBehaviour {
 
 			upgradeName.text       = affectedFactory.name;
 			upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
-			upgradeCost.text       = "Cost:"                           + affectedFactory.UpgradeCost;
+			upgradeCost.text       = "Cost:" + GameManager.Instance.ConvertedNumber(affectedFactory.UpgradeCost);
 		}
 	}
 }
