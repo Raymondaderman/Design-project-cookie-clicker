@@ -8,6 +8,7 @@ public class UpgradeButton : MonoBehaviour {
 	[SerializeField] private float     maxUpgradeAmount;
 	[SerializeField] private FactorySO affectedFactory;
 	[SerializeField] private AudioClip buttonSound;
+	[SerializeField] private bool      isSunMoonUpgrade;
 
 	[Header("Button Visuals")]
 	[SerializeField] private TextMeshProUGUI upgradeName;
@@ -16,26 +17,48 @@ public class UpgradeButton : MonoBehaviour {
 
 
 	private void Awake() {
-		upgradeName.text       = affectedFactory.name;
-		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
-		upgradeCost.text       = affectedFactory.UpgradeCost       + " Coins";
+		if (isSunMoonUpgrade) {
+			upgradeName.text       = "Sun/Moon";
+			upgradeMultiplier.text = SunMoonManager.Instance.UpgradeMultiplier + "X";
+			upgradeCost.text       = "Cost:"                                   + SunMoonManager.Instance.UpgradeCost;
+		} else {
+			upgradeName.text       = affectedFactory.name;
+			upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
+			upgradeCost.text       = "Cost:"                           + affectedFactory.UpgradeCost;
+		}
 	}
 
 
 	public void PurchaseUpgrade() {
 		AudioManager.Instance.PlayASound(buttonSound, 1f);
-		if (affectedFactory.UpgradeAmount >= maxUpgradeAmount) return;
-		if (affectedFactory.UpgradeCost   > GameManager.Instance.CoinAmount) return;
+		if (isSunMoonUpgrade) {
+			if (SunMoonManager.Instance.UpgradeAmount >= maxUpgradeAmount) return;
+			if (SunMoonManager.Instance.UpgradeCost   > GameManager.Instance.CoinAmount) return;
 
-		GameManager.Instance.CoinAmount -= affectedFactory.UpgradeCost;
+			GameManager.Instance.CoinAmount -= SunMoonManager.Instance.UpgradeCost;
 
 
-		affectedFactory.UpgradeCost *= upgradeCostMultiplier;
-		affectedFactory.UpgradeAmount++;
-		affectedFactory.UpgradeMultiplier++;
+			SunMoonManager.Instance.UpgradeCost *= upgradeCostMultiplier;
+			SunMoonManager.Instance.UpgradeAmount++;
+			SunMoonManager.Instance.UpgradeMultiplier++;
 
-		upgradeName.text       = affectedFactory.name;
-		upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
-		upgradeCost.text       = "Cost"                            + affectedFactory.UpgradeCost + " Coins";
+			upgradeName.text       = "Sun/Moon";
+			upgradeMultiplier.text = SunMoonManager.Instance.UpgradeMultiplier + "X";
+			upgradeCost.text       = "Cost:"                                   + SunMoonManager.Instance.UpgradeCost;
+		} else {
+			if (affectedFactory.UpgradeAmount >= maxUpgradeAmount) return;
+			if (affectedFactory.UpgradeCost   > GameManager.Instance.CoinAmount) return;
+
+			GameManager.Instance.CoinAmount -= affectedFactory.UpgradeCost;
+
+
+			affectedFactory.UpgradeCost *= upgradeCostMultiplier;
+			affectedFactory.UpgradeAmount++;
+			affectedFactory.UpgradeMultiplier++;
+
+			upgradeName.text       = affectedFactory.name;
+			upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
+			upgradeCost.text       = "Cost:"                           + affectedFactory.UpgradeCost;
+		}
 	}
 }

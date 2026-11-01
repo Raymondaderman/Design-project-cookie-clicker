@@ -7,6 +7,7 @@ public class FactorySO : ScriptableObject {
 
 	[Header("Base stats")]
 	[SerializeField] private string name;
+	[SerializeField] private float  unlockCost;
 	[SerializeField] private int    cost;
 	[SerializeField] private int    costIncrement;
 	[SerializeField] private float  earnings;
@@ -27,6 +28,7 @@ public class FactorySO : ScriptableObject {
 	public bool      automatic;
 	public Coroutine makeMoneyCoroutine;
 	public string    Name()     => name;
+	public float     UnlockCost => unlockCost;
 	public int       Cost()     => cost            + costIncrement    * level;
 	public float     Cooldown() => cooldown + 0.1f - cooldown * level / maxLevel / 2;
 	public Sprite    Sprite()   => sprite;

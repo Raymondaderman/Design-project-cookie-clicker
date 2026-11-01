@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d310f969c92c104a9c3ad16baf66251, type: 3}
-  m_Name: MoonCake
+  m_Name: StrawberryMochi
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
-  name: Mooncake
-  cost: 0
-  costIncrement: 2
-  earnings: 10
-  cooldown: 2
+  name: Strawberry mochi
+  unlockCost: 0
+  cost: 20
+  costIncrement: 5
+  earnings: 20
+  cooldown: 3
   level: 0
   maxLevel: 10
-  sprite: {fileID: 3316246628334969575, guid: 9961c88d1fef17b45a61a29075142239, type: 3}
+  sprite: {fileID: 6608794962519191589, guid: 7fd77912efac02741b7481bb13eb44bc, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
   upgradeCost: 0
-  automatic: 1
+  automatic: 0

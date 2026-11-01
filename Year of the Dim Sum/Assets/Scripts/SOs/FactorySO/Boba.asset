@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d310f969c92c104a9c3ad16baf66251, type: 3}
-  m_Name: Balls
+  m_Name: Boba
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
-  name: Balls
+  name: Boba
+  unlockCost: 0
   cost: 20
   costIncrement: 5
   earnings: 20
   cooldown: 3
   level: 0
   maxLevel: 10
-  sprite: {fileID: 7974444595178243388, guid: 725ab90dc2526444288de59aef68948a, type: 3}
+  sprite: {fileID: 350802407326495456, guid: 830e8a80b3de05e4d8e57e03c7a273bb, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
   upgradeCost: 0

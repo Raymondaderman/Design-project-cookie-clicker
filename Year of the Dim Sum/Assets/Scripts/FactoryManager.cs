@@ -25,15 +25,19 @@ public class FactoryManager : MonoBehaviour {
 		earningsText.text = SO.Earnings.ToString();
 		cooldownText.text = Math.Round(SO.Cooldown(), 1).ToString();
 		costText.text     = SO.Cost().ToString();
+		
+		var unlockCost = buttonGameObject.GetComponentInChildren<TextMeshProUGUI>();
+		unlockCost.text = SO.UnlockCost.ToString();
 	}
 
 	#endregion
 
 	#region LevelUp
 
-	public void UnlockFactory(GameObject factory) {
-		factory.gameObject.SetActive(true);
-		Destroy(buttonGameObject);
+	public void UnlockFactory(GameObject unlockHolder) {
+		if (GameManager.Instance.CoinAmount < SO.UnlockCost) return;
+		GameManager.Instance.CoinAmount -= SO.UnlockCost;
+		Destroy(unlockHolder);
 	}
 
 	public void LevelUp(FactorySO factory) {

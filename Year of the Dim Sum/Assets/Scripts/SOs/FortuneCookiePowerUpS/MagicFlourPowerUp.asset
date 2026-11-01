@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5174a40e1431a45829938a5a6094b2, type: 3}
   m_Name: MagicFlourPowerUp
   m_EditorClassIdentifier: Assembly-CSharp::FortuneCookiePowerUpSO
-  affectedFactory: []
+  affectedFactory:
+  - {fileID: 11400000, guid: 4f3fe338abcb3384fac3f6b201b5db67, type: 2}
+  - {fileID: 11400000, guid: 2886d7eb258377749a57accf36f0a359, type: 2}
+  - {fileID: 11400000, guid: a07cef16524a291448a1fbf58b719d1b, type: 2}
   powerUpName: Magic flour
   multiplier: 2
   duration: 30
