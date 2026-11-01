@@ -16,7 +16,7 @@ MonoBehaviour:
   unlockCost: 0
   cost: 20
   costIncrement: 5
-  earnings: 20
+  earnings: 10
   cooldown: 3
   level: 0
   maxLevel: 10
