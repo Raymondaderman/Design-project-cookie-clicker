@@ -17,14 +17,17 @@ public class UpgradeButton : MonoBehaviour {
 
 
 	private void Awake() {
+	}
+
+	private void Start() {
 		if (isSunMoonUpgrade) {
-			upgradeName.text       = "Sun/Moon";
+			upgradeName.text = "Sun/Moon";
 			upgradeMultiplier.text = SunMoonManager.Instance.UpgradeMultiplier + "X";
-			upgradeCost.text       = "Cost:"                                   + GameManager.Instance.ConvertedNumber(SunMoonManager.Instance.UpgradeCost);
+			upgradeCost.text = "Cost:" + GameManager.Instance.ConvertedNumber(SunMoonManager.Instance.UpgradeCost);
 		} else {
 			upgradeName.text       = affectedFactory.name;
 			upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
-			upgradeCost.text       = "Cost:"                           + GameManager.Instance.ConvertedNumber(affectedFactory.UpgradeCost);
+			upgradeCost.text       = "Cost:" + GameManager.Instance.ConvertedNumber(affectedFactory.UpgradeCost);
 		}
 	}
 
@@ -43,7 +46,8 @@ public class UpgradeButton : MonoBehaviour {
 			SunMoonManager.Instance.UpgradeMultiplier++;
 
 			upgradeMultiplier.text = SunMoonManager.Instance.UpgradeMultiplier + "X";
-			upgradeCost.text = "Cost:" + GameManager.Instance.ConvertedNumber(SunMoonManager.Instance.UpgradeCost);
+			if (SunMoonManager.Instance.UpgradeAmount >= maxUpgradeAmount) upgradeCost.text = "Max";
+			else upgradeCost.text = "Cost:" + GameManager.Instance.ConvertedNumber(SunMoonManager.Instance.UpgradeCost);
 		} else {
 			if (affectedFactory.UpgradeAmount >= maxUpgradeAmount) return;
 			if (affectedFactory.UpgradeCost   > GameManager.Instance.CoinAmount) return;
@@ -55,8 +59,9 @@ public class UpgradeButton : MonoBehaviour {
 			affectedFactory.UpgradeAmount++;
 			affectedFactory.UpgradeMultiplier++;
 
+			if (affectedFactory.UpgradeAmount >= maxUpgradeAmount) upgradeCost.text = "Max";
+			else upgradeCost.text       = "Cost:" + GameManager.Instance.ConvertedNumber(affectedFactory.UpgradeCost);
 			upgradeMultiplier.text = affectedFactory.UpgradeMultiplier + "X";
-			upgradeCost.text       = "Cost:" + GameManager.Instance.ConvertedNumber(affectedFactory.UpgradeCost);
 		}
 	}
 }

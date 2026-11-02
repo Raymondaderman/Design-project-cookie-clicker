@@ -26,7 +26,7 @@ public class FactoryManager : MonoBehaviour {
 		image.sprite      = SO.Sprite();
 		nameText.text     = SO.Name();
 		earningsText.text = GameManager.Instance.ConvertedNumber(SO.Earnings);
-		cooldownText.text = Math.Round(SO.Cooldown(), 1).ToString();
+		cooldownText.text = Math.Round(SO.Cooldown(), 1).ToString() + "Sec";
 		costText.text     = GameManager.Instance.ConvertedNumber(SO.Cost());
 
 		var unlockCost                  = buttonGameObject.GetComponentInChildren<TextMeshProUGUI>();
@@ -94,8 +94,9 @@ public class FactoryManager : MonoBehaviour {
 		cooldownFillImage.fillAmount = 100;
 		while (true) {
 			cooldownFillImage.sprite = progressBarSprite1;
-			yield return new WaitForSeconds(factory.Cooldown());
+			yield return new WaitForSeconds(factory.Cooldown() /2);
 			cooldownFillImage.sprite =  progressBarSprite2;
+			yield return new WaitForSeconds(factory.Cooldown() / 2);
 			gameManager.CoinAmount   += factory.Earnings;
 			yield return null;
 		}

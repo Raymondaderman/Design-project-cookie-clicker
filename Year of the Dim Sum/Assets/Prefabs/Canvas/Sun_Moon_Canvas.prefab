@@ -226,9 +226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Moon
   upgradeAmount: 0
   upgradeMultiplier: 1
-  upgradeCost: 0
+  upgradeCost: 100
   clickAmount: 1
-  dayCycleTime: 5
+  dayCycleTime: 30
   clickParticles: {fileID: 621609019987205532, guid: 1989d1eb175210f4c8411bee6b6ff5fa, type: 3}
   clickSound: {fileID: 8300000, guid: 176c093717a52fe4692d2a291f67aa65, type: 3}
   sunMoonAnimator: {fileID: 3366492985614806916}

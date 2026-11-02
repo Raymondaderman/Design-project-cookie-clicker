@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FortuneCookie
   fortuneCookiePrefab:
   - {fileID: 2654335795433915827, guid: 9ef6fe6c57b3bc64599417bf47a4b243, type: 3}
-  timeToRespawn: 3
+  timeToRespawn: 15
   currentTime: 10
   xRangeForSpawn: 600
   yRangeForSpawn: 500

@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5801887, g: 0.7269597, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.003921569, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7333012238342925459
 RectTransform:
   m_ObjectHideFlags: 0
@@ -305,7 +305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4416984421425420540
 RectTransform:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5801887, g: 0.7269597, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.003921569, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5801887, g: 0.7269597, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.003921569, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1483,7 +1483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6571553428116633611
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1559,7 +1559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5148762959009768737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1921,7 +1921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5801887, g: 0.7269597, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.003921569, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2521,7 +2521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5734183807059901483
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3453,7 +3453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5801887, g: 0.7269597, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.003921569, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4054,7 +4054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5801887, g: 0.7269597, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.003921569, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4164,7 +4164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5474260345190766674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4822,6 +4822,14 @@ PrefabInstance:
       propertyPath: cooldownFillImage
       value: 
       objectReference: {fileID: 8497234376259378483}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite1
+      value: 
+      objectReference: {fileID: -9061536118300504353, guid: 2a3212e9fb34cdd499298dfd080f7f2e, type: 3}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite2
+      value: 
+      objectReference: {fileID: 9169877530624898698, guid: 6dc52cd005f23c04290569ba193031b2, type: 3}
     - target: {fileID: 2579549926943305092, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_SizeDelta.x
       value: 359.6
@@ -4837,6 +4845,14 @@ PrefabInstance:
     - target: {fileID: 2659219675643610118, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_Name
       value: Pastry_Icon (Tint)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -5216,7 +5232,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8434876514792726214, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6663193337260520007}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4045964607776867021}
   m_SourcePrefab: {fileID: 100100000, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
 --- !u!114 &890783100000933557 stripped
 MonoBehaviour:
@@ -5240,6 +5259,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &3458409665720078244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+  m_PrefabInstance: {fileID: 1360617198610907253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4045964607776867021
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458409665720078244}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0e90209ef6dc664b93a7d8e00fa308f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &7420221733956377643 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8365452217496886366, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
@@ -5296,6 +5342,14 @@ PrefabInstance:
       propertyPath: cooldownFillImage
       value: 
       objectReference: {fileID: 1600813814635996891}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite1
+      value: 
+      objectReference: {fileID: -9061536118300504353, guid: 2a3212e9fb34cdd499298dfd080f7f2e, type: 3}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite2
+      value: 
+      objectReference: {fileID: 9169877530624898698, guid: 6dc52cd005f23c04290569ba193031b2, type: 3}
     - target: {fileID: 2579549926943305092, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_SizeDelta.x
       value: 36.232
@@ -5327,6 +5381,14 @@ PrefabInstance:
     - target: {fileID: 2659219675643610118, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_Name
       value: Pastry_Icon (Tint)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -5710,7 +5772,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8434876514792726214, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8331047956263597978}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3846598511508224004}
   m_SourcePrefab: {fileID: 100100000, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
 --- !u!114 &665921835078731436 stripped
 MonoBehaviour:
@@ -5723,6 +5788,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511a4ad71757b2f4bbb71f936b596572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FactoryManager
+--- !u!1 &3071414983451779005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+  m_PrefabInstance: {fileID: 1693499428197683308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3846598511508224004
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3071414983451779005}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0e90209ef6dc664b93a7d8e00fa308f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &3379217525698825606 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4135958872533851626, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
@@ -5786,9 +5878,25 @@ PrefabInstance:
       propertyPath: cooldownFillImage
       value: 
       objectReference: {fileID: 75266733266674755}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite1
+      value: 
+      objectReference: {fileID: -9061536118300504353, guid: 2a3212e9fb34cdd499298dfd080f7f2e, type: 3}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite2
+      value: 
+      objectReference: {fileID: 9169877530624898698, guid: 6dc52cd005f23c04290569ba193031b2, type: 3}
     - target: {fileID: 2659219675643610118, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_Name
       value: Pastry_Icon (Tint)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -5834,6 +5942,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 5959267677379519628, guid: 6f4075b45a8ecd54e9db5b14f090c0b9, type: 3}
+    - target: {fileID: 4735986500054455348, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Color.b
+      value: 0.99433964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735986500054455348, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9958901
+      objectReference: {fileID: 0}
     - target: {fileID: 5397942444984741092, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -12.3
@@ -6093,7 +6209,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8434876514792726214, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2301502037746982003}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7750826855386416920}
   m_SourcePrefab: {fileID: 100100000, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
 --- !u!114 &523264442533509148 stripped
 MonoBehaviour:
@@ -6106,6 +6225,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511a4ad71757b2f4bbb71f936b596572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FactoryManager
+--- !u!1 &2657420622764876045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+  m_PrefabInstance: {fileID: 1873025326843096796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7750826855386416920
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2657420622764876045}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0e90209ef6dc664b93a7d8e00fa308f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &7318500143908897554 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8966345283082333646, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
@@ -6162,9 +6308,25 @@ PrefabInstance:
       propertyPath: cooldownFillImage
       value: 
       objectReference: {fileID: 341898015443375016}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite1
+      value: 
+      objectReference: {fileID: -9061536118300504353, guid: 2a3212e9fb34cdd499298dfd080f7f2e, type: 3}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite2
+      value: 
+      objectReference: {fileID: 9169877530624898698, guid: 6dc52cd005f23c04290569ba193031b2, type: 3}
     - target: {fileID: 2659219675643610118, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_Name
       value: Pastry_Icon (Tint)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -6504,8 +6666,38 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8434876514792726214, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6801662530714603131}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8908561917852133241}
   m_SourcePrefab: {fileID: 100100000, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+--- !u!1 &555254369983893718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+  m_PrefabInstance: {fileID: 4227744865442062087}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8908561917852133241
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555254369983893718}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0e90209ef6dc664b93a7d8e00fa308f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2600449653558233543 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
@@ -6573,6 +6765,14 @@ PrefabInstance:
       propertyPath: cooldownFillImage
       value: 
       objectReference: {fileID: 5249015579718776591}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite1
+      value: 
+      objectReference: {fileID: -9061536118300504353, guid: 2a3212e9fb34cdd499298dfd080f7f2e, type: 3}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite2
+      value: 
+      objectReference: {fileID: 9169877530624898698, guid: 6dc52cd005f23c04290569ba193031b2, type: 3}
     - target: {fileID: 2579549926943305092, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_SizeDelta.x
       value: 358.09
@@ -6592,6 +6792,14 @@ PrefabInstance:
     - target: {fileID: 2659219675643610118, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_Name
       value: Pastry_Icon (Tint)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -6955,7 +7163,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8434876514792726214, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4372177616539270447}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8064322766367113589}
   m_SourcePrefab: {fileID: 100100000, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
 --- !u!224 &2552604335004272722 stripped
 RectTransform:
@@ -6988,6 +7199,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511a4ad71757b2f4bbb71f936b596572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FactoryManager
+--- !u!1 &8264174348334958385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+  m_PrefabInstance: {fileID: 5741915452710242528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8064322766367113589
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264174348334958385}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0e90209ef6dc664b93a7d8e00fa308f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8559795882027881738 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4135958872533851626, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
@@ -7035,6 +7273,14 @@ PrefabInstance:
       propertyPath: cooldownFillImage
       value: 
       objectReference: {fileID: 273862298108293829}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite1
+      value: 
+      objectReference: {fileID: -9061536118300504353, guid: 2a3212e9fb34cdd499298dfd080f7f2e, type: 3}
+    - target: {fileID: 2215015242428552896, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: progressBarSprite2
+      value: 
+      objectReference: {fileID: 9169877530624898698, guid: 6dc52cd005f23c04290569ba193031b2, type: 3}
     - target: {fileID: 2579549926943305092, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_SizeDelta.x
       value: 358.67
@@ -7054,6 +7300,14 @@ PrefabInstance:
     - target: {fileID: 2659219675643610118, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_Name
       value: Pastry_Icon (Tint)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3000398300183366454, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -7411,7 +7665,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8434876514792726214, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3728834936167367100}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6556546821904562336}
   m_SourcePrefab: {fileID: 100100000, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
 --- !u!224 &2519643868988328722 stripped
 RectTransform:
@@ -7444,6 +7701,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511a4ad71757b2f4bbb71f936b596572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FactoryManager
+--- !u!1 &7777931656644909213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4404343853951766481, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
+  m_PrefabInstance: {fileID: 6264397987538900812}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6556546821904562336
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777931656644909213}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0e90209ef6dc664b93a7d8e00fa308f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8037373279199873702 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4135958872533851626, guid: 9812630a5b435014a889427febcfe0fa, type: 3}
