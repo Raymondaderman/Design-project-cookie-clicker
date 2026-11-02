@@ -30,9 +30,9 @@ public class FactorySO : ScriptableObject {
 	public string    Name()     => name;
 	public float     UnlockCost => unlockCost;
 	public int       Cost()     => cost            + costIncrement    * level;
-	public float     Cooldown() => cooldown + 0.1f - cooldown * level / maxLevel / 2;
+	public float     Cooldown() => cooldown - cooldown * level / maxLevel / 2;
 	public Sprite    Sprite()   => sprite;
-	public int       MaxLevel() => maxLevel + 1;
+	public int       MaxLevel() => maxLevel;
 
 	#endregion
 
