@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: SesameBall
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
   name: Sesameball
-  unlockCost: 50000
-  cost: 20
-  costIncrement: 5
-  earnings: 10
-  cooldown: 3
+  unlockCost: 2000
+  cost: 1000
+  costIncrement: 1000
+  earnings: 200
+  cooldown: 10
   level: 0
   maxLevel: 10
   sprite: {fileID: 7974444595178243388, guid: 725ab90dc2526444288de59aef68948a, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
-  upgradeCost: 0
+  upgradeCost: 5000
   automatic: 0

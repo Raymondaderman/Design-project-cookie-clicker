@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: HataDrink
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
   name: Hata drink
-  unlockCost: 0
-  cost: 20
-  costIncrement: 5
-  earnings: 10
-  cooldown: 3
+  unlockCost: 25000
+  cost: 10000
+  costIncrement: 10000
+  earnings: 2500
+  cooldown: 15
   level: 0
   maxLevel: 10
   sprite: {fileID: 9130910393748812158, guid: b9d58724143570845903249523a55153, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
-  upgradeCost: 0
+  upgradeCost: 50000
   automatic: 0

@@ -16,6 +16,9 @@ public class FactoryManager : MonoBehaviour {
 	[SerializeField] private Image           cooldownFillImage;
 	[SerializeField] private GameObject      buttonGameObject;
 
+	[SerializeField] private Sprite progressBarSprite1;
+	[SerializeField] private Sprite progressBarSprite2;
+
 	GameManager gameManager;
 
 	private void Start() {
@@ -44,7 +47,9 @@ public class FactoryManager : MonoBehaviour {
 		if (gameManager.CoinAmount >= factory.Cost() && factory.Level < factory.MaxLevel()) {
 			gameManager.CoinAmount -= factory.Cost();
 			SO.Level++;
-			costText.text = factory.Level == factory.MaxLevel() ? "Max" : GameManager.Instance.ConvertedNumber(SO.Cost());
+			costText.text = factory.Level == factory.MaxLevel()
+				                ? "Max"
+				                : GameManager.Instance.ConvertedNumber(SO.Cost());
 			if (factory.Level         == factory.MaxLevel()) StartCoroutine(MakeAutomaticCoroutine(factory));
 			if (SO.makeMoneyCoroutine != null) cooldownText.text = Math.Round(SO.Cooldown(), 1).ToString();
 		}
@@ -88,8 +93,10 @@ public class FactoryManager : MonoBehaviour {
 		cooldownText.text            = (Math.Round(factory.Earnings / factory.Cooldown(), 1) + " Coins / Sec");
 		cooldownFillImage.fillAmount = 100;
 		while (true) {
+			cooldownFillImage.sprite = progressBarSprite1;
 			yield return new WaitForSeconds(factory.Cooldown());
-			gameManager.CoinAmount += factory.Earnings;
+			cooldownFillImage.sprite =  progressBarSprite2;
+			gameManager.CoinAmount   += factory.Earnings;
 			yield return null;
 		}
 	}

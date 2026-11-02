@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Boba
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
   name: Boba
-  unlockCost: 1000
-  cost: 20
-  costIncrement: 5
-  earnings: 10
-  cooldown: 3
+  unlockCost: 500
+  cost: 100
+  costIncrement: 100
+  earnings: 50
+  cooldown: 5
   level: 0
   maxLevel: 10
   sprite: {fileID: 350802407326495456, guid: 830e8a80b3de05e4d8e57e03c7a273bb, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
-  upgradeCost: 0
+  upgradeCost: 500
   automatic: 0

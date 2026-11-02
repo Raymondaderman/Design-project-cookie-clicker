@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: CreamSoda
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
   name: Cream soda
-  unlockCost: 0
-  cost: 20
-  costIncrement: 5
-  earnings: 10
-  cooldown: 3
+  unlockCost: 500000
+  cost: 250000
+  costIncrement: 250000
+  earnings: 50000
+  cooldown: 20
   level: 0
   maxLevel: 10
   sprite: {fileID: 4331893178509197836, guid: 9030cee988228f448aec69dc2ee50cf3, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
-  upgradeCost: 0
+  upgradeCost: 1250000
   automatic: 0

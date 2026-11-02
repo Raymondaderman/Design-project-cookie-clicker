@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Mochi
   m_EditorClassIdentifier: Assembly-CSharp::FactorySO
   name: Mochi
-  unlockCost: 0
-  cost: 20
-  costIncrement: 5
-  earnings: 10
-  cooldown: 3
+  unlockCost: 5000000
+  cost: 1000000
+  costIncrement: 1000000
+  earnings: 250000
+  cooldown: 25
   level: 0
   maxLevel: 10
   sprite: {fileID: 6608794962519191589, guid: 7fd77912efac02741b7481bb13eb44bc, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
-  upgradeCost: 0
+  upgradeCost: 5000000
   automatic: 0

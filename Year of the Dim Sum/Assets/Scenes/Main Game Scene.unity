@@ -421,6 +421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FortuneCookieManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6426391196344321115, guid: ede51716319006f4fa3be202106925aa, type: 3}
+      propertyPath: timeToRespawn
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8653541739167476423, guid: ede51716319006f4fa3be202106925aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.22582
@@ -912,6 +916,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4173092559714868201, guid: bce8431eb265a154486f7c85f84a3932, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4173092559714868201, guid: bce8431eb265a154486f7c85f84a3932, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1.22
+      objectReference: {fileID: 0}
     - target: {fileID: 5750027175932281459, guid: bce8431eb265a154486f7c85f84a3932, type: 3}
       propertyPath: m_Pivot.x
       value: 0
