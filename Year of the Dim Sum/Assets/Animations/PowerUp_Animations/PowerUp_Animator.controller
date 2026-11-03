@@ -39,8 +39,8 @@ AnimatorStateMachine:
     m_State: {fileID: -8481218554578668096}
     m_Position: {x: 250, y: 60, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 2601640774072139955}
-    m_Position: {x: 285, y: 125, z: 0}
+    m_State: {fileID: 4606879947660770495}
+    m_Position: {x: 320, y: 190, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -74,14 +74,14 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   m_EvaluateTransitionsOnStart: 1
---- !u!1102 &2601640774072139955
+--- !u!1102 &4606879947660770495
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fadeout_Animation
+  m_Name: Fadout_Number_Aniamtion
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -94,7 +94,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 242f10ca2cd424049a47bf08e213bc8b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9d3b522bc2d88884ca5141a9a90cced8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

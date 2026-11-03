@@ -23,5 +23,5 @@ MonoBehaviour:
   sprite: {fileID: 350802407326495456, guid: 830e8a80b3de05e4d8e57e03c7a273bb, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
-  upgradeCost: 500
+  upgradeCost: 256000
   automatic: 0

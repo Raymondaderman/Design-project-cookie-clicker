@@ -16,12 +16,12 @@ MonoBehaviour:
   unlockCost: 2000
   cost: 1000
   costIncrement: 1000
-  earnings: 200
+  earnings: 1600
   cooldown: 10
   level: 0
   maxLevel: 10
   sprite: {fileID: 7974444595178243388, guid: 725ab90dc2526444288de59aef68948a, type: 3}
   upgradeAmount: 0
   upgradeMultiplier: 1
-  upgradeCost: 5000
+  upgradeCost: 640000
   automatic: 0

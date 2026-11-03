@@ -14,7 +14,10 @@ public class SunMoonManager : MonoBehaviour {
 	[SerializeField] private int            dayCycleTime;
 	[SerializeField] private ParticleSystem clickParticles;
 
-	[SerializeField] private AudioClip clickSound;
+	[SerializeField] private AudioClip  clickSound;
+	[SerializeField] private GameObject clickAmountObject;
+
+	[SerializeField] private Canvas coinAmountCanvas;
 
 	[SerializeField] private Animator sunMoonAnimator;
 
@@ -35,7 +38,7 @@ public class SunMoonManager : MonoBehaviour {
 
 
 	public float ClickAmount {
-		get => clickAmount;
+		get => clickAmount * upgradeMultiplier;
 		set => clickAmount = value;
 	}
 
@@ -68,6 +71,7 @@ public class SunMoonManager : MonoBehaviour {
 		Instantiate(clickParticles, spawnPosition, Quaternion.identity);
 		if (GameManager.Instance.IsDay) GameManager.Instance.CoinAmount += clickAmount * upgradeMultiplier;
 		else GameManager.Instance.CoinAmount                            += clickAmount * upgradeMultiplier * 2;
+		Instantiate(clickAmountObject, spawnPosition, Quaternion.identity, coinAmountCanvas.transform);
 		Debug.Log("Moon/Sun clicked");
 	}
 }

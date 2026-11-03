@@ -5,7 +5,8 @@ public class BackgroundParallaxManager : MonoBehaviour {
 	[SerializeField] private GameObject[] parallaxObjects;
 	[SerializeField] private float        mouseSpeedX;
 	[SerializeField] private float        mouseSpeedY;
-	private Vector2[] originalPositions;
+	[SerializeField] private float        speedMultiplier;
+	private                  Vector2[]    originalPositions;
 
 	private void Start() {
 		Cursor.lockState = CursorLockMode.Confined;
@@ -17,14 +18,16 @@ public class BackgroundParallaxManager : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
-		var centeredMousePosX = (GameManager.Instance.MouseVector.x - (Screen.width / 2f)) * (mouseSpeedX / Screen.width);
-		var centeredMousePosY = (GameManager.Instance.MouseVector.y - (Screen.width / 2f)) * (mouseSpeedY / Screen.width);
+		var centeredMousePosX =
+			(GameManager.Instance.MouseVector.x - (Screen.width / 2f)) * (mouseSpeedX / Screen.width);
+		var centeredMousePosY =
+			(GameManager.Instance.MouseVector.y - (Screen.width / 2f)) * (mouseSpeedY / Screen.width);
 
 
 		for (var i = 0; i < parallaxObjects.Length; i++) {
 			parallaxObjects[i].transform.position = originalPositions[i] +
 			                                        new Vector2(centeredMousePosX, centeredMousePosY) *
-			                                        (i * i);
+			                                        (i * (speedMultiplier + i));
 		}
 	}
 }
